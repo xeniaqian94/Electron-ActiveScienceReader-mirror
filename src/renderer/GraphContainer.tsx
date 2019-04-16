@@ -390,8 +390,7 @@ export class GraphContainer extends React.Component<
               padding: 5,
               color: "black",
               fontWeight: "bold",
-              // height: "10px",
-              // width: "10px"
+
             }}
             draggable={false}
           >
@@ -409,7 +408,7 @@ export class GraphContainer extends React.Component<
                 }
               />{" "} */}
               "Auto-grab participant_detail (huge TODO in styling)"
-              {JSON.stringify((node as AutoGrab).data["participant_detail"])}
+              {JSON.stringify((node as AutoGrab).data['participant_detail'])}
             </span>
           </div>
         );
