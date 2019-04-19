@@ -1,0 +1,458 @@
+,paperID,pos_score,sent_pos,text
+405,pagesOfTextToDisplay-1,0.9456892609596252,405,"Participants and Methods We recruited 12 participants, all professional analysts or graduate students who regularly work with data."
+428,pagesOfTextToDisplay-1,0.8720768094062805,428,"Afterwards, each user completed a post-study questionnaire."
+376,pagesOfTextToDisplay-1,0.790040910243988,376,"d) We then enumerate all candidate before , selection and after combinations."
+368,pagesOfTextToDisplay-1,0.5038217902183533,368,The first three criteria rank transforms by their type; the remaining two rank transforms within types. (
+116,pagesOfTextToDisplay-1,0.3560963273048401,116,Filling missing values.
+431,pagesOfTextToDisplay-1,0.30528390407562256,431,Task completion times.
+407,pagesOfTextToDisplay-1,0.27514925599098206,407,Participants had never used the Wrangler interface.
+89,pagesOfTextToDisplay-1,0.25300824642181396,89,"To the left of the table is a panel containing an interactive history, a transform menu, and a transform editor."
+411,pagesOfTextToDisplay-1,0.2210773527622223,411,"In each task, we asked subjects to transform a data set into a new format, presented to them as a picture of the final data table."
+372,pagesOfTextToDisplay-1,0.20860974490642548,372,b) We tokenize selected and surrounding text.
+409,pagesOfTextToDisplay-1,0.19945864379405975,409,We then asked subjects to complete three tasks (described below) using both Wrangler and Excel.
+139,pagesOfTextToDisplay-1,0.18947076797485352,139,She selects the text 'Reported' in row 0.
+388,pagesOfTextToDisplay-1,0.17481668293476105,388,We then sort transforms within type.
+383,pagesOfTextToDisplay-1,0.161858931183815,383,We thus label row and text selections as hard and all others as easy .
+157,pagesOfTextToDisplay-1,0.15760868787765503,157,NEWLINE).max_splits(dwsplit.
+163,pagesOfTextToDisplay-1,0.15760868787765503,163,COPY).direction(dw.
+160,pagesOfTextToDisplay-1,0.15760868787765503,160,TAB).max_splits(dwsplit.
+400,pagesOfTextToDisplay-1,0.14729928970336914,400,Our goal was to compare task completion times and observe data cleaning strategies.
+438,pagesOfTextToDisplay-1,0.13077737390995026,438,"Across all tasks, median performance in Wrangler was over twice as fast as Excel (Fig."
+112,pagesOfTextToDisplay-1,0.11704270541667938,112,Text extraction.
+426,pagesOfTextToDisplay-1,0.10836628079414368,426,We permitted a maximum of 10 minutes per task.
+437,pagesOfTextToDisplay-1,0.09839113056659698,437,No other interactions were significant.
+179,pagesOfTextToDisplay-1,0.09339005500078201,179,We go on to discuss the technical details of our inference engine.
+421,pagesOfTextToDisplay-1,0.07796253263950348,421,"Users started with three columns of housing data: year, month, and price."
+432,pagesOfTextToDisplay-1,0.0684281662106514,432,Black bars indicate median values.
+16,pagesOfTextToDisplay-1,0.059586767107248306,16,Copyright 2011 ACM 978-1-4503-0267-8/11/05...$5.00.
+38,pagesOfTextToDisplay-1,0.05919957906007767,38,The Wrangler Interface.
+119,pagesOfTextToDisplay-1,0.05514894798398018,119,Deleting rows.
+158,pagesOfTextToDisplay-1,0.05514894798398018,158,NO_MAX)) .push(dwsplit('split').on(dw.
+108,pagesOfTextToDisplay-1,0.05514894798398018,108,Row deletion.
+206,pagesOfTextToDisplay-1,0.05514894798398018,206,skolemization ).
+441,pagesOfTextToDisplay-1,0.05261732637882233,441,"Moreover, the user study tasks involved small data sets amenable to manual manipulation."
+378,pagesOfTextToDisplay-1,0.04736892879009247,378,"e) Finally, we construct regular expressions for each candidate pattern."
+176,pagesOfTextToDisplay-1,0.039015304297208786,176,In the next section we describe the Wrangler trans-formation language.
+371,pagesOfTextToDisplay-1,0.03660153970122337,371,a) The user selects text in a cell. (
+144,pagesOfTextToDisplay-1,0.033242613077163696,144,5) and executes the transform.
+130,pagesOfTextToDisplay-1,0.03273647278547287,130,A ghosted table overlay previews the result.
+412,pagesOfTextToDisplay-1,0.02537081390619278,412,Task 1: Extract Text .
+165,pagesOfTextToDisplay-1,0.025035971775650978,165,DOWN)) .push(dw.unfold('Year').above('Property_crime_rate')) Figure 7.
+263,pagesOfTextToDisplay-1,0.023947445675730705,263,Editable Natural Language Descriptions. (
+370,pagesOfTextToDisplay-1,0.02265043929219246,370,Regular Expression Inference. (
+430,pagesOfTextToDisplay-1,0.021187348291277885,430,0 1 2 3 4 5 6 7 8 9 10 T1 T2 T3 User Study Task Completion Time (minutes) Wrangler Excel Figure 11.
+128,pagesOfTextToDisplay-1,0.019990382716059685,128,Table reshaping.
+141,pagesOfTextToDisplay-1,0.017689954489469528,141,"In response, the analyst selects the Delete command from the Rows menu in the transform editor."
+295,pagesOfTextToDisplay-1,0.01758846640586853,295,Visual preview of a fold operation.
+17,pagesOfTextToDisplay-1,0.01749209314584732,17,data warehousing projects [4].
+410,pagesOfTextToDisplay-1,0.01695013791322708,410,We randomized the presentation of tasks and tools across subjects.
+133,pagesOfTextToDisplay-1,0.015883490443229675,133,The analyst clicks the gray bar and Wrangler suggests transforms for missing values.
+367,pagesOfTextToDisplay-1,0.015135370194911957,367,Ranking Suggested Transforms Wrangler then rank-orders transform suggestions according to five criteria.
+416,pagesOfTextToDisplay-1,0.014713766053318977,416,Task 2: Fill Missing Values .
+262,pagesOfTextToDisplay-1,0.013591635972261429,262,Translation is Figure 8.
+105,pagesOfTextToDisplay-1,0.012288271449506283,105,"She selects the text 'Alaska' in row 6 of the ""Year"" column."
+92,pagesOfTextToDisplay-1,0.01142428070306778,92,"In this case, she has no need."
+245,pagesOfTextToDisplay-1,0.0107504827901721,245,Wrangler does not immediately execute a selected suggestion.
+381,pagesOfTextToDisplay-1,0.01033532153815031,381,"Second, we consider specification difficulty."
+97,pagesOfTextToDisplay-1,0.010281141847372055,97,The first suggestion is to delete just the selected row.
+87,pagesOfTextToDisplay-1,0.0075819231569767,87,The interface now shows a data table (Fig.
+406,pagesOfTextToDisplay-1,0.007177895400673151,406,Subjects rated their prior experience with Excel on a 10-point scale (1 being basic knowledge and 10 being expert); the median score was 5.
+330,pagesOfTextToDisplay-1,0.0070475139655172825,330,"Transform suggestion proceeds in three phases: inferring transform parameters from user interactions, generating candidate transforms from inferred parameters, and finally ranking the results."
+320,pagesOfTextToDisplay-1,0.006204130593687296,320,Wrangler infers semantic roles analogously.
+107,pagesOfTextToDisplay-1,0.005822283681482077,107,"The analyst updates Wrangler's Data Wrangler Export Import Split data repeatedly on newline into rows Split split repeatedly on ',' Promote row 0 to header Delete row 7 Delete empty rows Fill row 7 by copying values from above Fill row 7 by copying values from below Fold using row 7 as a key Fold Year using row 7 as a key Transform Script Text Split Cut Columns Fill Drop Rows Delete Fill Promote Table Fold Unfold Clear Year Property_crime_rate 0 Reported crime in Alabama 2 2004 4029.3 3 2005 3900 4 2006 3937 5 2007 3974.9 6 2008 4081.9 8 Reported crime in Alaska 10 2004 3370.9 11 2005 3615 12 2006 3582 13 2007 3373.9 14 2008 2928.3 16 Reported crime in Arizona 18 2004 5073.3 19 2005 4827 20 2006 4741.6 21 2007 4502.6 22 2008 4087.3 24 Reported crime in Arkansas 1 7 9 15 17 23 25 Figure 2."
+178,pagesOfTextToDisplay-1,0.005637658294290304,178,"Next, we describe Wrangler's mechanisms for verification."
+113,pagesOfTextToDisplay-1,0.005631969776004553,113,The analyst selects state names to extract them into a new column.
+359,pagesOfTextToDisplay-1,0.005472014658153057,359,It is then straightforward to translate matching label sequences into regular expressions.
+109,pagesOfTextToDisplay-1,0.0052392627112567425,109,The analyst selects an empty row and chooses a delete transform.
+49,pagesOfTextToDisplay-1,0.0051145837642252445,49,Wrangler is one piece of a larger effort to address bottlenecks in the data lifecycle by integrating insights and methods from the HCI and database communities.
+420,pagesOfTextToDisplay-1,0.0050371428951621056,420,1 Task 3: Reshape Table Structure .
+375,pagesOfTextToDisplay-1,0.0049168504774570465,375,c) We enumerate all label sequences matching the text. (
+401,pagesOfTextToDisplay-1,0.004754162393510342,401,We chose Excel because it is the most popular data manipulation tool and provides an ecologically valid baseline for comparison: all subjects use it regularly and half selfreport as experts.
+177,pagesOfTextToDisplay-1,0.004715812858194113,177,We then present the Wrangler interface and its techniques for navigating suggestion space.
+104,pagesOfTextToDisplay-1,0.004581550136208534,104,"The analyst would like to compare data across states, so she now needs to extract the state names and add them to each row of the data."
+259,pagesOfTextToDisplay-1,0.004380022641271353,259,We also sought to make parameters within descriptions readable by non-experts.
+352,pagesOfTextToDisplay-1,0.004245281219482422,352,For column selections we simply return the columns that users have interacted with.
+120,pagesOfTextToDisplay-1,0.00396833335980773,120,"The analyst selects text in an unwanted row and selects a delete operation within the ""Rows"" menu."
+13,pagesOfTextToDisplay-1,0.003946189768612385,13,Others estimate that data cleaning is responsible for up to 80% of the development time and cost in Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page.
+72,pagesOfTextToDisplay-1,0.003944007679820061,72,"Ajax [8] also provides an interface to specify transforms, with advanced facilities for entity resolution."
+396,pagesOfTextToDisplay-1,0.003676558379083872,396,"Finally, we attempt to surface diverse transform types in the final suggestion list."
+454,pagesOfTextToDisplay-1,0.0031974257435649633,454,"We performed an ANOVA and found a significant difference among the ratings ( F 2 , 33 = 17.33, p< 0.001)."
+268,pagesOfTextToDisplay-1,0.003155567217618227,268,only performed with regular expressions generated by the Wrangler inference engine.
+66,pagesOfTextToDisplay-1,0.003013267880305648,66,"However, Wrangler differs in important ways."
+451,pagesOfTextToDisplay-1,0.0029922309331595898,451,"If only imperfect matches were found, users then selected the nearest transform and edited its parameters."
+217,pagesOfTextToDisplay-1,0.0028367710765451193,217,We sought a consistent mapping between the transforms shown in the interface and statements in the language.
+76,pagesOfTextToDisplay-1,0.002816148102283478,76,"Though users can specify some commands graphically, others must be written in a command language."
+106,pagesOfTextToDisplay-1,0.002622749423608184,106,Wrangler initially interprets this as selecting text at positions 18-24.
+402,pagesOfTextToDisplay-1,0.002340726787224412,402,Excel also supports our chosen tasks.
+19,pagesOfTextToDisplay-1,0.0022269526962190866,19,"Moreover, this hurdle discourages many people from working with data in the first place."
+103,pagesOfTextToDisplay-1,0.0022022787015885115,103,The system then adds the deletion operation to the history view.
+240,pagesOfTextToDisplay-1,0.0021353703923523426,240,"Instead of enumerating the entire suggestion space, users can prune and reorder the space in three ways."
+114,pagesOfTextToDisplay-1,0.0020825478713959455,114,Yellow highlights show a preview of the result.
+433,pagesOfTextToDisplay-1,0.00200509000569582,433,Median Wrangler performance is over twice as fast in all tasks.
+351,pagesOfTextToDisplay-1,0.001986417220905423,351,"We list predicates of the form ""row is empty"" and ""column [equals | starts with | ends with | contains] selectedvalue"", then emit the selections that match the rows and text currently selected in the interface."
+233,pagesOfTextToDisplay-1,0.001760525512509048,233,Textual annotations enable communication of analyst intent.
+122,pagesOfTextToDisplay-1,0.0016563213430345058,122,inference by selecting 'Arizona' in the cell six rows below.
+63,pagesOfTextToDisplay-1,0.0016524528618901968,63,Other interfaces [15] apply PBD to data integration via copy and paste actions.
+356,pagesOfTextToDisplay-1,0.0015654976014047861,356,"We then enumerate label sequences that match the text before, within, and after the selection range (see Fig."
+186,pagesOfTextToDisplay-1,0.0014743736246600747,186,Language statements manipulate data tables with numbered rows and named columns of data.
+188,pagesOfTextToDisplay-1,0.0014676027931272984,188,"The language consists of eight classes of transforms, described below."
+386,pagesOfTextToDisplay-1,0.0014364722883328795,386,"In the case of text selection, we also consider the length of the selected text."
+147,pagesOfTextToDisplay-1,0.0014135325327515602,147,"She selects the ""Year"" and ""Property_crime_rate"" columns, previews the suggested unfold operation (Fig."
+366,pagesOfTextToDisplay-1,0.0013380610616877675,366,"We then filter the suggestion set to remove ""degenerate"" (noop) transforms that would have no effect on the data."
+448,pagesOfTextToDisplay-1,0.0013203031849116087,448,"One subject noted, ""I just look at the picture."""
+452,pagesOfTextToDisplay-1,0.0013177365763112903,452,"In other words, users turned to manual parameterization only as a last resort."
+265,pagesOfTextToDisplay-1,0.0013031740672886372,265,b) Clicking on a parameter reveals an in-place editor. (
+167,pagesOfTextToDisplay-1,0.001234545954503119,167,The script encodes a step-by-step description of how to operate on input data; a Wrangler runtime evaluates the script to produce transformed data.
+422,pagesOfTextToDisplay-1,0.0011945831356570125,422,"The target data set contained the same data formatted as a cross-tab: the data contained one row for each year, with the 12 months as column headers and housing prices as cell values."
+281,pagesOfTextToDisplay-1,0.001180462772026658,281,Deletion previews color to-be-deleted cells in red (Fig.
+342,pagesOfTextToDisplay-1,0.0011471603065729141,342,Text selections are equivalent if both (a) are indexbased selections or (b) contain regular expressions.
+198,pagesOfTextToDisplay-1,0.0011236631544306874,198,Wrangler provides two reshaping operators: fold and unfold .
+348,pagesOfTextToDisplay-1,0.0011232084361836314,348,We infer a parameter's values independent of the other parameters.
+51,pagesOfTextToDisplay-1,0.001111797639168799,51,"These techniques include methods for detecting erroneous values [10, 11], information extraction [1, 25], entity resolution [6], type inference [7], and schema matching [9, 21]."
+392,pagesOfTextToDisplay-1,0.001110772485844791,392,We define transform complexity as the sum of complexity scores for each parameter.
+277,pagesOfTextToDisplay-1,0.0011085316073149443,277,"In defining these mappings, we attempted to convey a transform's effect with minimum displacement of the original data."
+269,pagesOfTextToDisplay-1,0.0010968494461849332,269,"If a user types in a custom expression, Wrangler will reflect their input."
+350,pagesOfTextToDisplay-1,0.0010862089693546295,350,We infer row selections based on row indices and predicate matching.
+267,pagesOfTextToDisplay-1,0.001082305214367807,267,"In this case, a new window size parameter is displayed for the moving average."
+417,pagesOfTextToDisplay-1,0.0010777285788208246,417,We gave users data containing year-by-year agricultural data for three countries.
+353,pagesOfTextToDisplay-1,0.0010643417481333017,353,Emitted text selections are either simple index ranges (based directly on selections in the interface) or inferred regular expressions.
+196,pagesOfTextToDisplay-1,0.001058535068295896,196,These joins are useful for lookups and for correcting typos for known data types.
+199,pagesOfTextToDisplay-1,0.0010545128025114536,199,"Fold collapses multiple columns to two or more columns containing key-value sets, while an unfold creates new column headers from data values; see [22] for an extended discussion."
+71,pagesOfTextToDisplay-1,0.0010263612493872643,71,Wrangler extends the Potter's Wheel language with key differences discussed later.
+143,pagesOfTextToDisplay-1,0.0009885646868497133,143,She finds the suggestion that deletes the unwanted rows (Fig.
+408,pagesOfTextToDisplay-1,0.00094436394283548,408,"We first presented a 10 minute Wrangler tutorial describing how to create, edit, and execute transforms."
+440,pagesOfTextToDisplay-1,0.0009100817842409015,440,"Users completed the cleaning tasks significantly more quickly with Wrangler than with Excel, and this speed-up benefitted novice and expert Excel users alike."
+93,pagesOfTextToDisplay-1,0.0008844535914249718,93,The analyst then begins wrangling the file into a usable form.
+465,pagesOfTextToDisplay-1,0.0008775349706411362,465,"This pitfall was most common in Task 3, where a user might mistakenly filter all but fold operations when an unfold operation was needed."
+333,pagesOfTextToDisplay-1,0.000874149554874748,333,We built our initial corpus by wrangling our collection of gathered data sets.
+55,pagesOfTextToDisplay-1,0.0008706303196959198,55,"Toped ++ [24] is an interface for creating Topes , objects that validate and transform data."
+197,pagesOfTextToDisplay-1,0.0008559737470932305,197,Reshape transforms manipulate table structure and schema.
+447,pagesOfTextToDisplay-1,0.0008515482768416405,447,"For other operations, users performed an initial selection and then previewed each suggestion."
+100,pagesOfTextToDisplay-1,0.0008424181141890585,100,"For deletions, the preview highlights the candidate deleted rows in red (Fig."
+339,pagesOfTextToDisplay-1,0.0008385730907320976,339,We treat two row selections as equivalent if they both (a) contain filtering conditions (either indexor predicate-based) or (b) match all rows in a table.
+299,pagesOfTextToDisplay-1,0.0008154943352565169,299,"For instance, in a fold operation, data values that will become keys are colored to match the keys in the output table (Fig."
+445,pagesOfTextToDisplay-1,0.0007892977446317673,445,These strategies were largely consistent across users.
+232,pagesOfTextToDisplay-1,0.0007892447174526751,232,Natural language descriptions areintended to enhance analysts' ability to review and refine transformation steps.
+35,pagesOfTextToDisplay-1,0.0007847444503568113,35,Programming-by-demonstration techniques help analysts specify complex criteria such as regular expressions.
+170,pagesOfTextToDisplay-1,0.0007647012243978679,170,"However, after considering different mappings and evaluating their implications, we were unable to devise an intuitive and unambiguous mapping between simple gestures and the full expressiveness of the language."
+84,pagesOfTextToDisplay-1,0.0007352889515459538,84,"The data were downloaded as a CSV (comma-separated values) file, but are not immediately usable by other tools: the data contains empty lines, U.S. states are organized in disjoint matrices, and the state names are embedded in other text."
+345,pagesOfTextToDisplay-1,0.000722957425750792,345,"As our corpus of transforms grows with more use, we plan to explore more principled approaches (such as clustering) to refine our matching routines."
+344,pagesOfTextToDisplay-1,0.000721122371032834,344,We chose these equivalency classes based on exploratory analysis of our corpus and they seem to work well in practice.
+54,pagesOfTextToDisplay-1,0.0007105956319719553,54,"Many of these tools provide interfaces for schema matching or entity resolution [3, 9, 16, 23]."
+136,pagesOfTextToDisplay-1,0.0007062310469336808,136,"Looking at the ""Year"" column, the analyst notices a red bar in the data quality meter indicating inconsistent data types."
+361,pagesOfTextToDisplay-1,0.0007033749716356397,361,"For each parameter set, we loop over each transform type in the language, emitting the types that can accept all parameters in the set."
+306,pagesOfTextToDisplay-1,0.0007019838085398078,306,"Upon changes, Wrangler runs the edited script and updates the data table."
+304,pagesOfTextToDisplay-1,0.000693781184963882,304,"Transformation Histories and Export As successive transforms are applied, Wrangler adds their descriptions to an interactive transformation history viewer ."
+318,pagesOfTextToDisplay-1,0.0006887363269925117,318,"Wrangler applies validation functions to a sample of a column's data to infer these types, assigning the type that validates for over half of the non-missing values."
+42,pagesOfTextToDisplay-1,0.0006861056317575276,42,short natural language descriptions —which users can refine via interactive parameters—and visual previews of transform results.
+276,pagesOfTextToDisplay-1,0.0006815562373958528,276,"Wrangler maps transforms to at least one of five preview classes: selection, deletion, update, column and table."
+95,pagesOfTextToDisplay-1,0.0006784743163734674,95,"First, she clicks a row header for an empty row (7) to select it; the transformation editor suggests possible operations in response (Fig."
+8,pagesOfTextToDisplay-1,0.0006775594665668905,8,"Author Keywords Data cleaning, transformation, validation, visualization, programming by demonstration, mixed-initiative interfaces."
+248,pagesOfTextToDisplay-1,0.0006742530385963619,248,"Also, a user can instead interact with the table to generate new suggestions that use the working transform as context."
+39,pagesOfTextToDisplay-1,0.0006558620953001082,39,"The left panel contains (from top-to-bottom) a history of transforms, a transform selection menu, and automatically suggested transforms based on the current selection."
+11,pagesOfTextToDisplay-1,0.0006547623197548091,11,"To improve data quality, analysts must also identify and address issues such as misspellings, missing data, unresolved duplicates, and outliers."
+91,pagesOfTextToDisplay-1,0.0006532811094075441,91,"Note that the analyst could undo any transform by clicking the red undo button (which appears upon mouse-over of a transform), or could modify transform parameters in place."
+341,pagesOfTextToDisplay-1,0.0006501465104520321,341,We based this rule on the observation that transforms that operate on identical data types are more likely to be similar.
+203,pagesOfTextToDisplay-1,0.0006423077429644763,203,"For example, an analyst might fill empty cells with preceding non-empty values."
+257,pagesOfTextToDisplay-1,0.0006363266729749739,257,"In most cases, this parameter is left undefined and including it would bloat the description."
+266,pagesOfTextToDisplay-1,0.0006088886293582618,266,"c) After editing, the description may update to include new parameters."
+288,pagesOfTextToDisplay-1,0.000605410139542073,288,These alter the structure of the table to such an extent that the best preview is to show another table (Fig.
+241,pagesOfTextToDisplay-1,0.0005952853825874627,241,"First, users can provide more examples to disambiguate input to the inference engine."
+382,pagesOfTextToDisplay-1,0.00059165881248191,382,We have observed that row and text selection predicates are harder to specify than other parameters.
+4,pagesOfTextToDisplay-1,0.0005850254092365503,4,"Wrangler combines direct manipulation of visualized data with automatic inference of relevant transforms, enabling analysts to iteratively explore the space of applicable operations and preview their effects."
+192,pagesOfTextToDisplay-1,0.0005827164277434349,192,"One-to-many transforms include operations for splitting data into multiple rows, such as splitting a text file on newlines or unnesting arrays and sets."
+81,pagesOfTextToDisplay-1,0.0005775116733275354,81,"To help analysts understand the effects of an operation before they commit to it, Wrangler's natural language transform descriptions are augmented by novel transform previews that visualize transform results."
+187,pagesOfTextToDisplay-1,0.0005619052681140602,187,"Wrangler treats raw text as a ""degenerate"" table containing one row and one column."
+235,pagesOfTextToDisplay-1,0.0005573040107265115,235,Basic Interactions The Wrangler interface supports six basic interactions within the data table.
+161,pagesOfTextToDisplay-1,0.0005541783175431192,161,NO_MAX)) .push(dw.filter(dw.isEmpty())) .push(dw.extract('Year')..on(/.*/)).after(/in /) .push(dw.columnName('match').to('State')) .push(dw.fill('State').method(dw.
+395,pagesOfTextToDisplay-1,0.0005529359332285821,395,All other parameters are given complexity scores of zero.
+36,pagesOfTextToDisplay-1,0.0005517842946574092,36,"To ensure relevance, Wrangler enumerates and rank-orders possible transforms using a model that incorporates user input with the frequency, diversity, and specification difficulty of applicable transform types."
+211,pagesOfTextToDisplay-1,0.0005516238743439317,211,"As an example, consider a semantic role defining a zip code ."
+450,pagesOfTextToDisplay-1,0.0005453102057799697,450,"When users did not find a transform among the initial suggestions, they most often filtered the suggestions by selecting a transform type from the menu."
+181,pagesOfTextToDisplay-1,0.0005416051135398448,181,"Both prior work [8, 17, 22] and empirical data guided the language design."
+249,pagesOfTextToDisplay-1,0.0005404554540291429,249,"Natural Language Descriptions To aid apprehension of suggested transforms, Wrangler generates short natural language descriptions of the transform type and parameters."
+258,pagesOfTextToDisplay-1,0.0005345718818716705,258,"To edit hidden parameters, users can click the expansion arrow to the left of the description, revealing an editor with entries for all possible parameters."
+252,pagesOfTextToDisplay-1,0.0005304517690092325,252,Clicking a link reveals an in-place editor appropriate to the parameter (Fig.
+150,pagesOfTextToDisplay-1,0.0005175707628950477,150,The analyst's process results in a transformation script written in a declarative transformation language.
+394,pagesOfTextToDisplay-1,0.00050939159700647,394,The complexity of a regular expression is defined to be the number of tokens (described previously) in its description.
+244,pagesOfTextToDisplay-1,0.0005068299942649901,244,"Third, users can edit a transform by altering the parameters of a transform to a desired state."
+363,pagesOfTextToDisplay-1,0.0004885284579358995,363,Wrangler instantiates each emitted transform with parameters from the parameter set.
+446,pagesOfTextToDisplay-1,0.0004820471804123372,446,"For text selection, users frequently provided multiple examples."
+283,pagesOfTextToDisplay-1,0.0004806741781067103,283,Update previews overwrite values in a column and indicate differences with yellow highlights (Fig.
+52,pagesOfTextToDisplay-1,0.0004778494476340711,52,In the Wrangler interface we seek to surface such techniques in an accessible manner.
+224,pagesOfTextToDisplay-1,0.0004726047918666154,224,"To this aim, our interface combines direct manipulation, automatic suggestion, menu-based transform selection, and manual editing of transform parameters."
+134,pagesOfTextToDisplay-1,0.0004714825772680342,134,The analyst chooses to fill empty cells with the value from above (Fig.
+61,pagesOfTextToDisplay-1,0.0004690479254350066,61,Karma [26] infers text extractors and transformations for web data from examples entered in a table.
+429,pagesOfTextToDisplay-1,0.00046846820623613894,429,"1 We acknowledge that this is not an ideal cleaning solution for the data, but it nonetheless served as a useful test."
+226,pagesOfTextToDisplay-1,0.00046667002607136965,226,Both novices and experts can find it difficult to specify transform parameters such as regular expressions.
+358,pagesOfTextToDisplay-1,0.0004632288764696568,358,"Next we emit all possible combinations of before, within, and after sequences that match all current text selection examples in the interface."
+459,pagesOfTextToDisplay-1,0.0004566356656141579,459,"For instance, Task 3 exhibited an uneven distribution of completion times; 7 of the 10 fastest times and 3 of the 4 slowest times were in Wrangler."
+418,pagesOfTextToDisplay-1,0.0004553825710900128,418,Some of the values in the data set were blank.
+357,pagesOfTextToDisplay-1,0.00045533099910244346,357,10); sequences can contain either an annotation label or the exact token text.
+285,pagesOfTextToDisplay-1,0.00045137095730751753,285,"Column previews display new derived columns, e.g., as results from an extract operation (Fig."
+397,pagesOfTextToDisplay-1,0.0004443499492481351,397,"We filter the transforms so that no type accounts for more than 1/3 of the suggestions, unless the transform type matches the working transform or the filter results in fewer suggestions than can appear in the interface."
+175,pagesOfTextToDisplay-1,0.00044068825081922114,175,"Wrangler is a browser-based web application, written in JavaScript."
+180,pagesOfTextToDisplay-1,0.00043844807078130543,180,THE WRANGLER TRANSFORMATION LANGUAGE Underlying the Wrangler interface is a declarative data transformation language.
+202,pagesOfTextToDisplay-1,0.0004297753912396729,202,Fill operations generate values based on neighboring values in a row or column and so depend on the sort order of the table.
+374,pagesOfTextToDisplay-1,0.00042154951370321214,374,"For each token, we generate a set of matching labels. ("
+364,pagesOfTextToDisplay-1,0.00041541128302924335,364,"To determine values for missing parameters, we query the corpus for the top-k (default 4) parameterizations that cooccur most frequently with the provided parameter set."
+145,pagesOfTextToDisplay-1,0.00040741945849731565,145,"At this point the analyst has wrangled the data into a proper relational format, sufficient for export to database and visualization tools."
+279,pagesOfTextToDisplay-1,0.00040189927676692605,279,Selection previews highlight relevant regions of text in all affected cells (Fig.
+264,pagesOfTextToDisplay-1,0.0004004616930615157,264,a) An example of an editable description; highlighted text indicates editable parameters. (
+403,pagesOfTextToDisplay-1,0.00039675235166214406,403,Neither Potter's Wheel [22] (no support for fill) nor Google Refine [13] (lack of reshaping) support the full set.
+137,pagesOfTextToDisplay-1,0.00039000011747702956,137,"Wrangler has inferred that the column primarily contains numbers, and so has flagged non-numeric values as potential errors."
+94,pagesOfTextToDisplay-1,0.00038669913192279637,94,"The analyst could specify transforms explicitly by selecting a transform type from the menu and then assigning values to parameters; however, she instead opts to use direct manipulation along with Wrangler's suggestion engine."
+303,pagesOfTextToDisplay-1,0.0003812141658272594,303,The consistent use of colors allows users to associate clauses in a description with their effects in the table.
+169,pagesOfTextToDisplay-1,0.00038062408566474915,169,Originally we thought that each of these operators might correspond to a single interaction with example data in a table view.
+243,pagesOfTextToDisplay-1,0.0003740877436939627,243,"Second, users can filter the space of transforms by selecting an operator from the transform menu."
+131,pagesOfTextToDisplay-1,0.00036942088627256453,131,Color highlights show the correspondence of data between the start and end states.
+332,pagesOfTextToDisplay-1,0.0003674493345897645,332,The corpus consists of frequency counts of transform descriptors and initiating interactions.
+129,pagesOfTextToDisplay-1,0.0003537177399266511,129,"The analyst selects two columns, and then elects to unfold them to create a cross-tabulation."
+216,pagesOfTextToDisplay-1,0.0003533163107931614,216,The Wrangler language design co-evolved with the interface described in subsequent sections.
+331,pagesOfTextToDisplay-1,0.0003502416657283902,331,"Usage Corpus and Transform Equivalence To generate and rank transforms, Wrangler's inference engine relies on a corpus of usage statistics."
+271,pagesOfTextToDisplay-1,0.0003352383791934699,271,"For most transforms, Wrangler displays these previews in the source data, and not as a separate visualization (e.g., side-by-side before and after views)."
+322,pagesOfTextToDisplay-1,0.0003327161830384284,322,Clicking the icon reveals a menu with which users can manually assign a type or role.
+12,pagesOfTextToDisplay-1,0.0003319042734801769,12,Our own informal interviews with data analysts have found that these types of transforms constitute the most tedious component of their analytic process.
+449,pagesOfTextToDisplay-1,0.00033172228722833097,449,"Users with a programming background spent time reading transform descriptions, whereas the other users relied almost entirely on the previews."
+246,pagesOfTextToDisplay-1,0.00033029334736056626,246,"Instead, Wrangler makes it the current working transform ."
+399,pagesOfTextToDisplay-1,0.0003270262968726456,399,"Subjects performed three common data cleaning tasks: value extraction, missing value imputation, and table reshaping."
+380,pagesOfTextToDisplay-1,0.0003258436336182058,380,"First, we consider explicit interactions: if a user chooses a transform from the menu or selects a current working transform, we assign higher rank to transforms of that type."
+193,pagesOfTextToDisplay-1,0.000321677653118968,193,Lookups and joins incorporate data from external tables.
+234,pagesOfTextToDisplay-1,0.00031289368052966893,234,Wrangler also couples verification (run in the background as data is transformed) with visualization to help users discover data quality issues.
+377,pagesOfTextToDisplay-1,0.00031121360370889306,377,Patterns that do not uniquely match the selected text are filtered (indicated by strike-through). (
+313,pagesOfTextToDisplay-1,0.0003101112088188529,313,Users can export both generated scripts and transformed data; clicking the Export button in the transform history invokes export options.
+314,pagesOfTextToDisplay-1,0.00030955366673879325,314,"Analysts can later run saved or exported scripts on new data sources, modifying the script as needed."
+37,pagesOfTextToDisplay-1,0.0003079411690123379,37,"To convey the effects of data transforms, Wrangler providesData Wrangler Export Import Split data repeatedly on newline into rows Split split repeatedly on ',' Promote row 0 to header Delete row 7 Delete empty rows Fill row 7 by copying values from above Fill row 7 by copying values from below Fold using row 7 as a key Fold Year using row 7 as a key Transform Script Text Split Cut Columns Fill Drop Rows Delete Fill Promote Table Fold Unfold Clear Year Property_crime_rate 0 Reported crime in Alabama 1 2 2004 4029.3 3 2005 3900 4 2006 3937 5 2007 3974.9 6 2008 4081.9 7 8 Reported crime in Alaska 9 10 2004 3370.9 11 2005 3615 12 2006 3582 13 2007 3373.9 14 2008 2928.3 15 16 Reported crime in Arizona 17 18 2004 5073.3 19 2005 4827 20 2006 4741.6 21 2007 4502.6 22 2008 4087.3 23 24 Reported crime in Arkansas 25 Figure 1."
+343,pagesOfTextToDisplay-1,0.0003073337720707059,343,We con-sider enumerable parameters equivalent only if they match exactly.
+470,pagesOfTextToDisplay-1,0.00030720935319550335,470,"Our user study demonstrates that novice Wrangler users can perform data cleaning tasks significantly faster than in Excel, an effect shared across both novice and expert Excel users."
+10,pagesOfTextToDisplay-1,0.0003030627267435193,10,"Analysts must regularly restructure data to make it palatable to databases, statistics packages, and visualization tools."
+2,pagesOfTextToDisplay-1,0.00030206775409169495,2,"These transforms are often difficult to specify and difficult to reuse across analysis tasks, teams, and tools."
+138,pagesOfTextToDisplay-1,0.0002939995320048183,138,She decides to remove the rows containing the text 'Reported'.
+464,pagesOfTextToDisplay-1,0.0002932832285296172,464,"By design, Wrangler does not afford users the same flexibility to layout data as in Excel; since users cannot perform arbitrary editing in Wrangler, the recourse is less obvious when they get stuck."
+99,pagesOfTextToDisplay-1,0.0002875290811061859,99,"As she navigates the suggestions, Wrangler previews the effects of the transforms in the data table."
+298,pagesOfTextToDisplay-1,0.0002852387260645628,298,"For reshape transforms, Wrangler highlights the input data in the same color as the corresponding output in the secondary table."
+466,pagesOfTextToDisplay-1,0.00028495449805632234,466,"One solution may be to suggest non-matching transforms related to the selected transform type, in effect treating filtering criteria as guidelines rather than strict rules."
+195,pagesOfTextToDisplay-1,0.0002811450103763491,195,Currently Wrangler supports two types of joins: equi-joins and approximate joins using string edit distance.
+201,pagesOfTextToDisplay-1,0.00027295295149087906,201,Positional transforms include fill and lag operations.
+237,pagesOfTextToDisplay-1,0.00026876357151195407,237,Users can also choose transforms from the menu or refine suggestions by editing transform descriptions as described below.
+0,pagesOfTextToDisplay-1,0.0002648358349688351,0,"Wrangler: Interactive Visual Specification of Data Transformation Scripts Sean Kandel ∗ , Andreas Paepcke ∗ , Joseph Hellerstein † and Jeffrey Heer ∗ ∗ Stanford University † University of California, Berkeley skandel, paepcke, jheer@cs.stanford.edu hellerstein@cs.berkeley.edu ABSTRACT Though data analysis tools continue to improve, analysts still expend an inordinate amount of time and effort manipulating data and assessing data quality issues."
+53,pagesOfTextToDisplay-1,0.0002634408592712134,53,A number of commercial and research systems provide graphical interfaces leveraging the above methods.
+290,pagesOfTextToDisplay-1,0.0002580593863967806,290,These table previews use color highlights to match input data to their new locations in the output table.
+294,pagesOfTextToDisplay-1,0.00025613466277718544,294,"For example, byData Wrangler Export Import Split data repeatedly on newline into rows Split split repeatedly on "","" Promote row 0 to header Delete rows 0,1 Fill row 0 by copying values from the left Transform Script Text Split Cut Columns Fill Drop Rows Delete Fill Promote Table Fold Unfold Clear split split1 split2 split3 split4 0 2004 2004 2004 2003 1 STATE Participation Rate 2004 Mean SAT I Verbal Mean SAT I Math Participation Rate 2003 2 New York 87 497 510 82 3 Connecticut 85 515 515 84 4 Massachusetts 85 518 523 82 5 New Jersey 83 501 514 85 6 New Hampshire 80 522 521 75 7 D.C. 77 489 476 77 8 Maine 76 505 501 70 9 Pennsylvania 74 501 502 73 10 Delaware 73 500 499 73 11 Georgia 73 494 493 66 split fold fold1 value 0 New York 2004 Participation Rate 2004 1 New York 2004 Mean SAT I Verbal 2 New York 2004 Mean SAT I Math 3 New York 2003 Participation Rate 2003 4 New York 2003 Mean SAT I Verbal 5 New York 2003 Mean SAT I Math 6 Connecticut 2004 Participation Rate 2004 7 Connecticut 2004 Mean SAT I Verbal 8 Connecticut 2004 Mean SAT I Math 9 Connecticut 2003 Participation Rate 2003 10 Connecticut 2003 Mean SAT I Verbal 11 Connecticut 2003 Mean SAT I Math 12 Massachusetts 2004 Participation Rate 2004 87 497 510 82 496 510 85 515 515 84 512 514 85 Figure 9."
+250,pagesOfTextToDisplay-1,0.0002505186712369323,250,"These descriptions are editable, with parameters presented as bold hyperlinks (Fig."
+191,pagesOfTextToDisplay-1,0.00024970018421299756,191,"One-to-one transforms include extracting , cutting , and splitting values into multiple columns; reformatting; simple arithmetic; and value updates ."
+102,pagesOfTextToDisplay-1,0.0002493725623935461,102,The analyst mouses over the suggestion to delete all empty rows in the table and clicks the green add button to execute the transform.
+362,pagesOfTextToDisplay-1,0.00024783596745692194,362,"For example, a split transform can accept a parameter set containing a text selection, but an unfold transform can not."
+153,pagesOfTextToDisplay-1,0.0002468099119141698,153,"By clicking the Export button above the transformation history, the analyst can either save the transformed data or generate runnable code implementing the transformation (Fig."
+475,pagesOfTextToDisplay-1,0.00024576406576670706,475,"The result is that people with highly specialized skills (e.g., statistics, molecular biology, micro-economics) spend more time in tedious ""wrangling"" tasks than they do in exercising their specialty, while less technical audiences such as journalists are unnecessarily shut out."
+373,pagesOfTextToDisplay-1,0.0002454369969200343,373,"For clarity, the figure only includes two neighboring tokens."
+123,pagesOfTextToDisplay-1,0.0002452656044624746,123,"Wrangler now suggests extracting text occurring after the string ""in "" (Fig."
+238,pagesOfTextToDisplay-1,0.00024280532670672983,238,"Automated Transformation Suggestions As a user interacts with data, Wrangler generates a list of suggested transforms ."
+444,pagesOfTextToDisplay-1,0.00024103012401610613,444,"Strategies for Navigating Suggestion Space When working with Wrangler, users applied different navigation strategies for different tasks."
+329,pagesOfTextToDisplay-1,0.00023223937023431063,329,"Inputs to the engine consist of user interactions; the current working transform; data descriptions such as column data types, semantic roles, and summary statistics; and a corpus of historical usage statistics."
+118,pagesOfTextToDisplay-1,0.0002297807513969019,118,"Data Wrangler Export Import Split data repeatedly on newline into rows Split split repeatedly on ',' Promote row 0 to header Delete empty rows Extract from Year after 'in ' Set extract's name to State Fill State by copying values from above Delete rows where Year starts with 'Reported' Delete rows where Year contains 'Reported' Extract from Year between positions 0, 8 Extract from Year on 'Reported' Cut from Year between positions 0, 8 Cut from Year on 'Reported' Transform Script Text Split Cut Columns Fill Drop Rows Delete Fill Promote Table Fold Unfold Clear Year State Property_crime_rate 1 2004 Alabama 4029.3 2 2005 Alabama 3900 3 2006 Alabama 3937 4 2007 Alabama 3974.9 5 2008 Alabama 4081.9 7 2004 Alaska 3370.9 8 2005 Alaska 3615 9 2006 Alaska 3582 10 2007 Alaska 3373.9 11 2008 Alaska 2928.3 13 2004 Arizona 5073.3 14 2005 Arizona 4827 15 2006 Arizona 4741.6 16 2007 Arizona 4502.6 17 2008 Arizona 4087.3 19 2004 Arkansas 4033.1 20 2005 Arkansas 4068 21 2006 Arkansas 4021.6 22 2007 Arkansas 3945.5 23 2008 Arkansas 3843.7 25 2004 California 3423.9 0 Reported crime in Alabama Alabama 6 Reported crime in Alaska Alaska 12 Reported crime in Arizona Arizona 18 Reported crime in Arkansas Arkansas 24 Reported crime in California California Figure 5."
+393,pagesOfTextToDisplay-1,0.0002280162734678015,393,"The complexity of a row selection predicate is the number of clauses it contains (e.g., ""a=5 and b=6"" has complexity 2)."
+337,pagesOfTextToDisplay-1,0.00022778411221224815,337,"In order to get useful transform frequencies, we define a relaxed matching routine: two transforms are considered equivalent in our corpus if (a) they have an identical transform type (e.g., extract or fold ) and (b) they have equivalent parameters as defined below."
+296,pagesOfTextToDisplay-1,0.00022501715284306556,296,"For transforms that rearrange table layout, Wrangler previews the output table and uses color highlights to show the correspondence of values across table states."
+231,pagesOfTextToDisplay-1,0.00021919893333688378,231,"To reduce this gulf of evaluation [20], Wrangler provides natural language descriptions and visual transform previews ."
+34,pagesOfTextToDisplay-1,0.00021863708388991654,34,"As users select data, Wrangler suggests applicable transforms based on the current context of interaction."
+214,pagesOfTextToDisplay-1,0.00021796270448248833,214,"Wrangler leverages types and roles for parsing, validation, and transform suggestion."
+79,pagesOfTextToDisplay-1,0.00021353160263970494,79,Wrangler provides an inference engine that generates and rank-orders suggested transforms in response to direct manipulation of a data table.
+457,pagesOfTextToDisplay-1,0.00021178275346755981,457,"Users' navigation strategies worked well when they understood the nature of the desired transform, even if they did not know how to specify it."
+347,pagesOfTextToDisplay-1,0.0002110029454343021,347,"For each type we enumerate possible parameter values, resulting in a collection of inferred parameter sets."
+32,pagesOfTextToDisplay-1,0.0002101976133417338,32,"To do so, Wrangler couples a mixed-initiative user interface with an underlying declarative transformation language ."
+183,pagesOfTextToDisplay-1,0.00020952787599526346,183,"Informed by a corpus of data sets gathered from varied sources (e.g., data.gov, NGOs, log files, web APIs), we then extended the language with additional operators for common data cleaning tasks."
+194,pagesOfTextToDisplay-1,0.00020687238429673016,194,"Wrangler includes extensible lookup tables to support common types of transformations, such as mapping zip codes to state names for aggregation across states."
+379,pagesOfTextToDisplay-1,0.0002059379912680015,379,Ensuring that transforms of the same type are adjacent helps users compare varying parameterizations more easily.
+413,pagesOfTextToDisplay-1,0.00020562375721056014,413,"In this task, we asked users to extract the number of bedrooms and housing price from housing listings on craigslist."
+317,pagesOfTextToDisplay-1,0.00019840308232232928,317,"As users transform data, Wrangler attempts to infer the data type and semantic role for each column."
+82,pagesOfTextToDisplay-1,0.00019590085139498115,82,"In concert, these techniques help analysts iteratively hone in on a desired transformation."
+29,pagesOfTextToDisplay-1,0.00019408907974138856,29,"As a result, we contend that the proper output of data wrangling is not just transformed data, but an editable and auditable description of the data transformations applied."
+474,pagesOfTextToDisplay-1,0.0001901206123875454,474,"As data processing has become more sophisticated, there has been little progress on improving the tedious parts of the pipeline: data entry, data (re)formatting, data cleaning, etc."
+338,pagesOfTextToDisplay-1,0.00018607841047924012,338,"Wrangler transforms accept four basic types of parameters: row, column or text selections and enumerables."
+468,pagesOfTextToDisplay-1,0.000185938406502828,468,The system provides a mixed-initiative interface that maps user interactions to suggested data transforms and presents natural language descriptions and visual transform previews to help assess each suggestion.
+390,pagesOfTextToDisplay-1,0.00018378417007625103,390,"Second, we sort transforms in ascending order using a simple measure of transform complexity ."
+301,pagesOfTextToDisplay-1,0.00018355701467953622,301,Wrangler also highlights the parameters in the transform description using the same colors as those generated in previews (Fig.
+355,pagesOfTextToDisplay-1,0.00018086141790263355,355,"We annotate tokens with one or more labels of the form number , word , uppercase word, lowercase word, or whitespace ."
+461,pagesOfTextToDisplay-1,0.00017783253861125559,461,"However, those familiar with pivot operations in Excel uniformly performed the task more quickly with Wrangler."
+425,pagesOfTextToDisplay-1,0.00017735302390065044,425,"For Wrangler tasks, we did not respond to user inquiries."
+209,pagesOfTextToDisplay-1,0.0001769378432072699,209,Data types comprise standard primitives and associated parsing functions.
+325,pagesOfTextToDisplay-1,0.00017641692829784006,325,Clicking a bar generates suggested transforms for that category.
+340,pagesOfTextToDisplay-1,0.00017444920376874506,340,Column selections are equivalent if they refer to columns with the same data type or semantic role.
+148,pagesOfTextToDisplay-1,0.00017440866213291883,148,"6), then executes it to create the desired cross-tab."
+369,pagesOfTextToDisplay-1,0.00017406934057362378,369,"a) Reported crime in Alabama (b) before : {'in', ' '} 'Alabama' → {'Alabama', word } selection : {'Alabama'} 'in' → {'in', word , lowercase } after : ∅ ' ' → {' '} (c) before : {(' '), ('in', ' '), ( word , ' '), ( lowercase , ' ')} selection : {('Alabama'), ( word )} after : ∅ (d) {(),('Alabama'),()} {(),( word ),()} {(' '),(),()} {( word , ' '),(),()} {(' '),('Alabama'),()} {( word , ' '),('Alabama'),()} {(' '),( word ),()} {( word , ' '),( word ),()} {('in', ' '),(),()} {( lowercase , ' '),(),()} {('in', ' '),('Alabama'),()} {( lowercase , ' '),('Alabama'),()} {('in', ' '),( word ),()} {( low er case , ' '),( word ),()} (e) {( lowercase , ' '),('Alabama'),()} → /[a-z]+ (Alabama)/ Figure 10."
+427,pagesOfTextToDisplay-1,0.00017254742851946503,427,Each data set had at most 30 rows and 4 columns; complete manual manipulation in Excel was easily attainable within the time limits.
+90,pagesOfTextToDisplay-1,0.00017156805552076548,90,"The history already contains three transforms, as Wrangler inferred that the data was in CSV format and so split the text into rows on newline characters, split the rows into columns on commas, and promoted the first row to be the table header."
+335,pagesOfTextToDisplay-1,0.00016864643839653581,335,"For any given transform, we are unlikely to find an exact match in the corpus."
+443,pagesOfTextToDisplay-1,0.0001685504976194352,443,"Of course, larger data sets might complicate the process of assessing transform effects and so may benefit from additional validation and visualization techniques."
+77,pagesOfTextToDisplay-1,0.00016805202176328748,77,"Moreover, the system assumes that input data arrives in a proper tabular format, limiting the forms of data to which it can be applied."
+272,pagesOfTextToDisplay-1,0.0001662790309637785,272,In-place previews provide a visual economy that serves a number of goals.
+98,pagesOfTextToDisplay-1,0.00016359175788238645,98,The analyst can navigate the suggestions using the keyboard up and down arrows or by mousing over the description in the editor pane.
+58,pagesOfTextToDisplay-1,0.00016110442811623216,58,Many data cleaning applications apply direct manipulation and programming-by-demonstration (PBD) methods to specific cleaning tasks.
+60,pagesOfTextToDisplay-1,0.00015639628691133112,60,Potluck [14] applies simultaneous text editing [19] to merge data sources.
+391,pagesOfTextToDisplay-1,0.00015179176989477128,391,Our goal is to preferentially rank simpler transforms because users can evaluate their descriptions more quickly.
+65,pagesOfTextToDisplay-1,0.00014463676779996604,65,Wrangler uses semantic roles akin to Topes [24] and provides natural language descriptions of transforms [18].
+334,pagesOfTextToDisplay-1,0.0001396593579556793,334,The corpus updates over time as more analysts use Wrangler.
+419,pagesOfTextToDisplay-1,0.00013928035332355648,419,The target data set contained the same data with all missing values replaced with the closest non-empty value from a previous year.
+415,pagesOfTextToDisplay-1,0.00013500088243745267,415,The target data set consisted of two columns: one for the number of bedrooms and one for the housing price.
+117,pagesOfTextToDisplay-1,0.00013483461225405335,117,"The analyst populates empty cells by clicking the gray bar in the data quality meter above the ""State"" column, and then selecting a fill transform."
+111,pagesOfTextToDisplay-1,0.00013382705219555646,111,"Data Wrangler Export Import Split data repeatedly on newline into rows Split split repeatedly on ',' Promote row 0 to header Delete empty rows Extract from Year after 'in ' Extract from Year after ' in ' Cut from Year after 'in ' Cut from Year after ' in ' Split Year after 'in ' Split Year after ' in ' Transform Script Text Split Cut Columns Fill Drop Rows Delete Fill Promote Table Fold Unfold Clear Year extract Property_crime_rate 0 Reported crime in Alabama 1 2004 4029.3 2 2005 3900 3 2006 3937 4 2007 3974.9 5 2008 4081.9 6 Reported crime in Alaska 7 2004 3370.9 8 2005 3615 9 2006 3582 10 2007 3373.9 11 2008 2928.3 12 Reported crime in Arizona 13 2004 5073.3 14 2005 4827 15 2006 4741.6 16 2007 4502.6 17 2008 4087.3 18 Reported crime in Arkansas 19 2004 4033.1 20 2005 4068 21 2006 4021.6 22 2007 3945.5 23 2008 3843.7 24 Reported crime in California 25 2004 3423.9 Alabama Alaska Arizona Arkansas California Figure 3."
+47,pagesOfTextToDisplay-1,0.0001335401611868292,47,We also present a controlled user study comparing Wrangler and Excel across a set of data wrangling tasks.
+222,pagesOfTextToDisplay-1,0.00013182616385165602,222,"Through both our own practice and discussions with analysts, we believe our extended language is sufficient to handle a large variety of data wrangling tasks."
+389,pagesOfTextToDisplay-1,0.000127498569781892,389,We first sort transforms by frequency of equivalent transforms in the corpus.
+308,pagesOfTextToDisplay-1,0.0001267771440325305,308,Wrangler scripts also support lightweight text annotations.
+324,pagesOfTextToDisplay-1,0.00012452944065444171,324,"Values that parse successfully are indicated in green; values that match the type but do not match the role (e.g., a 6 digit zip code) are shown in yellow; those that do not match the type (e.g., 'One' does not parse as an integer) are shown in red; and missing data are shown in gray."
+354,pagesOfTextToDisplay-1,0.00012421346036717296,354,"To generate regular expressions, we tokenize the text within a cell and extract both the selected text and any surrounding text within a 5 token window."
+453,pagesOfTextToDisplay-1,0.00012359821994323283,453,"Our post-study questionnaire asked users to rate automated suggestions, visual previews, and direct editing of transforms on a scale from 1 (not useful) to 5 (most useful)."
+460,pagesOfTextToDisplay-1,0.00012304831761866808,460,"Wrangler does not provide the recourse of manual editing, hence users who got stuck fared slightly better in Excel."
+127,pagesOfTextToDisplay-1,0.00012034073006361723,127,"These missing values are in-Data Wrangler Export Import Split data repeatedly on newline into rows Split split repeatedly on ',' Promote row 0 to header Delete empty rows Extract from Year after 'in ' Set extract's name to State Fill State by copying values from above Delete rows where Year starts with 'Reported' Drop Year, Property_crime_rate Fold Year, Property_crime_rate using header as a key Fold Year, Property_crime_rate using row 0 as a key Unfold Year on Property_crime_rate Unfold Property_crime_rate on Year Merge Year, Property_crime_rate with glue Transform Script Text Split Cut Columns Fill Drop Rows Delete Fill Promote Table Fold Unfold Clear Next Prev Year State Property_crime_rate 0 2004 Alabama 4029.3 1 2005 Alabama 3900 2 2006 Alabama 3937 3 2007 Alabama 3974.9 4 2008 Alabama 4081.9 5 2004 Alaska 3370.9 6 2005 Alaska 3615 7 2006 Alaska 3582 8 2007 Alaska 3373.9 9 2008 Alaska 2928.3 10 2004 Arizona 5073.3 11 2005 Arizona 4827 12 2006 Arizona 4741.6 13 2007 Arizona 4502.6 14 2008 Arizona 4087.3 State 2004 2005 2006 2007 2008 0 Alabama 1 Alaska 2 Arizona 3 Arkansas 4 California 5 Colorado 6 Connecticut 7 Delaware 8 District of Columbia 9 Florida 10 Georgia 11 Hawaii 12 Idaho 13 Illinois 14 Indiana 15 Iowa 4029.3 3900 3937 3974.9 4081.9 3370.9 3615 3582 3373.9 2928.3 5073.3 4827 4741.6 4502.6 4087.3 4033.1 4068 4021.6 3945.5 3843.7 3423.9 3321 3175.2 3032.6 2940.3 3918.5 4041 3441.8 2991.3 2856.7 2684.9 2579 2575 2470.6 2490.8 3283.6 3118 3474.5 3427.1 3594.7 4852.8 4490 4653.9 4916.3 5104.6 4182.5 4013 3986.2 4088.8 4140.6 4223.5 4145 3928.8 3893.1 3996.6 4795.5 4800 4219.9 4119.3 3566.5 2781 2697 2386.9 2264.2 2116.5 3174.1 3092 3019.6 2935.8 2932.6 3403.6 3460 3464.3 3386.5 3339.6 2904.8 2845 2870.3 2648.6 2440.5 Figure 6."
+414,pagesOfTextToDisplay-1,0.00011767750402214006,414,"The original data set contained one cell for each listing, with all the information in a text string."
+24,pagesOfTextToDisplay-1,0.00011755679588532075,24,The effects of transforms that aggregate data or rearrange data layout can be particularly hard to conceptualize ahead of time.
+476,pagesOfTextToDisplay-1,0.00011745272786356509,476,"We believe that more research integrating methods from HCI, visualization, databases, and statistics can play a vital role in making data more accessible and informative."
+190,pagesOfTextToDisplay-1,0.0001153761986643076,190,Delete transforms (one-to-zero) accept predicates determining which rows to remove.
+293,pagesOfTextToDisplay-1,0.00011519061081344262,293,Highlighting selected text or cells works well for certain transformations.
+31,pagesOfTextToDisplay-1,0.0001131974277086556,31,We designed Wrangler to help analysts author expressive transformations while simplifying specification and minimizing manual repetition.
+185,pagesOfTextToDisplay-1,0.00011284542415523902,185,"We also introduced conditional mapping operators (e.g., update country to ""U.S."" where state=""California"")."
+64,pagesOfTextToDisplay-1,0.00010930876305792481,64,"Wrangler applies a number of these techniques: it infers regular expressions from example selections [2] and supports mass editing [14, 19]."
+297,pagesOfTextToDisplay-1,0.00010709955677157268,297,"highlighting the text selected by a regular expression in each cell, users can determine which examples they need to fix."
+26,pagesOfTextToDisplay-1,0.00010583434050204232,26,"Of course, transforming and cleaning a data set is only one step in the larger data lifecycle."
+126,pagesOfTextToDisplay-1,0.00010561079398030415,126,She notices that the column is sparsely populated.
+278,pagesOfTextToDisplay-1,0.00010540692164795473,278,"This stability allows users to continue interacting with the original data, e.g., to provide new selection examples."
+207,pagesOfTextToDisplay-1,0.00010540349467191845,207,"Finally, the language contains schema transforms to set column names, specify column data types, and assign semantic roles."
+1,pagesOfTextToDisplay-1,0.00010518469207454473,1,"Such ""data wrangling"" regularly involves reformatting data values or layout, correcting erroneous or missing values, and integrating multiple data sources."
+110,pagesOfTextToDisplay-1,0.00010503017256269231,110,Red highlights preview which rows will be deleted.
+152,pagesOfTextToDisplay-1,0.00010500955977477133,152,The analyst can also annotate these transformations with her rationale.
+423,pagesOfTextToDisplay-1,0.00010434073192300275,423,"When using Excel, we allowed subjects to ask for references to functions they could describe concretely (e.g., we would answer ""how do I split a cell?"""
+25,pagesOfTextToDisplay-1,0.00010423712956253439,25,"As data sets grow in size and complexity, discovering data quality issues may be as difficult as correcting them."
+336,pagesOfTextToDisplay-1,0.00010162129910895601,336,"For instance, an analyst may perform a fold operation over a combination of columns and rows that does not appear in the corpus."
+312,pagesOfTextToDisplay-1,0.00010124871914740652,312,These annotations appear as comments in code-generated scripts.
+121,pagesOfTextToDisplay-1,9.820017294259742e-05,121,Red highlighting previews which rows will be deleted.
+223,pagesOfTextToDisplay-1,9.792714263312519e-05,223,THE WRANGLER INTERFACE DESIGN The goal of the Wrangler interface is to enable analysts to author expressive transformations with minimal difficulty and tedium.
+404,pagesOfTextToDisplay-1,9.76787632680498e-05,404,"In contrast, Excel includes specific tools for each task (text-to-columns, goto-special & pivot tables) in addition to manual editing."
+50,pagesOfTextToDisplay-1,9.685521945357323e-05,50,RELATED WORK The database and machine learning communities have contributed a number of algorithmic techniques for aiding data cleaning and integration.
+33,pagesOfTextToDisplay-1,9.675396722741425e-05,33,"With Wrangler, analysts specify transformations by building up a sequence of basic transforms."
+59,pagesOfTextToDisplay-1,9.629573469283059e-05,59,Users of SWYN [2] build regular expressions by providing example text selections and can evaluate their effect in visual previews.
+455,pagesOfTextToDisplay-1,9.58480522967875e-05,455,"Users rated previews ( μ = 4.8) and suggestions ( μ = 4.3) significantly more useful than direct editing ( μ = 2.5) ( p< 0.001 in both cases by 2 We divided subjects into ""novices"" and ""experts"" according to their median self-reported expertise rating (5).Tukey's HSD)."
+291,pagesOfTextToDisplay-1,9.272214083466679e-05,291,"Some transforms map to multiple classes; e.g., extract transforms use both selection and column previews."
+40,pagesOfTextToDisplay-1,9.193889854941517e-05,40,Bold text within the transform descriptions indicate parameters that can be clicked and revised.
+14,pagesOfTextToDisplay-1,9.145354124484584e-05,14,"To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee."
+5,pagesOfTextToDisplay-1,9.114760905504227e-05,5,"Wrangler leverages semantic data types (e.g., geographic locations, dates, classification codes) to aid validation and type conversion."
+205,pagesOfTextToDisplay-1,8.935661753639579e-05,205,"The language also includes functions for sorting , aggregation (e.g., sum, min, max, mean, standard deviation), and key generation (a.k.a.,"
+307,pagesOfTextToDisplay-1,8.913325291359797e-05,307,Toggling or editing a transform may result in downstream errors; Wrangler highlights broken transforms in red and provides an error message to aid debugging.
+45,pagesOfTextToDisplay-1,8.90249721123837e-05,45,"Wrangler's interactive history viewer supports review, refinement, and annotation of these scripts."
+75,pagesOfTextToDisplay-1,8.889399032341316e-05,75,It provides summarization and filtering support through faceted histograms.
+436,pagesOfTextToDisplay-1,8.748994150664657e-05,436,"We found a significant interaction effect of task and expertise ( F 1 , 54 = 11.10, p< 0.002) driven by improved performance by experts (regardless of tool) in the reshaping task (T3)."
+67,pagesOfTextToDisplay-1,8.691491530044004e-05,67,"PBD data tools support text extraction or data integration, but lack operations such as reshaping, aggregation, and missing value imputation."
+115,pagesOfTextToDisplay-1,8.533430082025006e-05,115,"Data Wrangler Export Import Split data repeatedly on newline into rows Split split repeatedly on ',' Promote row 0 to header Delete empty rows Extract from Year after 'in ' Set extract's name to State Delete rows where State is null Fill State by copying values from above Fill State by copying values from below Transform Script Text Split Cut Columns Fill Drop Rows Delete Fill Promote Table Fold Unfold Clear Year State Property_crime_rate 0 Reported crime in Alabama Alabama 1 2004 4029.3 2 2005 3900 3 2006 3937 4 2007 3974.9 5 2008 4081.9 6 Reported crime in Alaska Alaska 7 2004 3370.9 8 2005 3615 9 2006 3582 10 2007 3373.9 11 2008 2928.3 12 Reported crime in Arizona Arizona 13 2004 5073.3 14 2005 4827 15 2006 4741.6 16 2007 4502.6 17 2008 4087.3 18 Reported crime in Arkansas Arkansas 19 2004 4033.1 20 2005 4068 21 2006 4021.6 22 2007 3945.5 23 2008 3843.7 24 Reported crime in California California 25 2004 3423.9 Alabama Alabama Alabama Alabama Alabama Alaska Alaska Alaska Alaska Alaska Arizona Arizona Arizona Arizona Arizona Arkansas Arkansas Arkansas Arkansas Arkansas California Figure 4."
+310,pagesOfTextToDisplay-1,8.488281309837475e-05,310,"To annotate a transform, users can click the edit icon next to the desired transform and write their annotation in the resulting text editor."
+458,pagesOfTextToDisplay-1,8.45131726237014e-05,458,"However, we found that users of both tools experienced difficulty when they lacked a conceptual model of the transform."
+462,pagesOfTextToDisplay-1,8.425583655480295e-05,462,"We also observed one recurring pitfall: a few users got stuck in a ""cul-de-sac"" of suggestion space by incorrectly filtering (e.g., by selecting a specific transform type from the menu)."
+23,pagesOfTextToDisplay-1,8.33983940538019e-05,23,"Converting coded values, such as mapping FIPS codes to U.S. state names, requires integrating data from one or more external tables."
+305,pagesOfTextToDisplay-1,8.325636008521542e-05,305,Users can edit individual transform descriptions and selectively enable and disable prior transforms.
+21,pagesOfTextToDisplay-1,8.117064862744883e-05,21,Part of the problem is that reformatting and validating data requires transforms that can be difficult to specify and evaluate.
+398,pagesOfTextToDisplay-1,8.082509884843603e-05,398,"COMPARATIVE EVALUATION WITH EXCEL As an initial evaluation of Wrangler, we conducted a comparative user study with Microsoft Excel."
+254,pagesOfTextToDisplay-1,8.059383981162682e-05,254,Enumerable variables (such as the direction of a fill) are mapped to drop-down menus while free-form text parameters are mapped to text editors with autocomplete.
+469,pagesOfTextToDisplay-1,8.013527258299291e-05,469,"With this set of techniques, we find that users can rapidly navigate to a desired transform."
+256,pagesOfTextToDisplay-1,7.961179653648287e-05,256,"For example, the unless between parameter for split operations indicates regions of text to ignore while splitting."
+46,pagesOfTextToDisplay-1,7.950118742883205e-05,46,Wrangler's high-level language supports a variety of runtime platforms: Wrangler scripts can be run in a web browser using JavaScript or translated into MapReduce or Python code.
+132,pagesOfTextToDisplay-1,7.862433994887397e-05,132,dicated by the gray bar in the data quality meter above the column.
+471,pagesOfTextToDisplay-1,7.79066322138533e-05,471,"We found that users are comfortable switching navigation strategies in Wrangler to suit a specific task, but can sometimes get stuck—in either tool—if they are unfamiliar with the available transforms."
+146,pagesOfTextToDisplay-1,7.761824235785753e-05,146,But now suppose she would like to create a cross-tabulation of crime rates by state and year for subsequent graphing in Excel.
+151,pagesOfTextToDisplay-1,7.74906511651352e-05,151,"The script provides an auditable description of the transformation enabling later inspection, reuse, and modification."
+311,pagesOfTextToDisplay-1,7.70489641581662e-05,311,Users can view an annotation by mousing over the same edit icon.
+41,pagesOfTextToDisplay-1,7.70200349506922e-05,41,The right panel contains an interactive data table; above each column is a data quality meter.
+27,pagesOfTextToDisplay-1,7.674076914554462e-05,27,Data updates and evolving schemas often necessitate the reuse and revision of transformations.
+69,pagesOfTextToDisplay-1,7.550889858976007e-05,69,Most closely related to Wrangler is prior work on interactive data cleaning.
+3,pagesOfTextToDisplay-1,7.547017594333738e-05,3,"In response, we introduce Wrangler , an interactive system for creating data transformations."
+384,pagesOfTextToDisplay-1,7.497392653021961e-05,384,We then sort transform types according to the count of hard parameters they can accept.
+174,pagesOfTextToDisplay-1,7.472266588592902e-05,174,"We then focused on rapid means for users to navigate—prune, refine, and evaluate—these suggestions to find a desired transform."
+73,pagesOfTextToDisplay-1,7.382141484413296e-05,73,Neither tool provides much support for direct manipulation: interaction is largely restricted to menu-based commands or entering programming statements.
+327,pagesOfTextToDisplay-1,7.255636592162773e-05,327,Clicking the fails role bar will suggest transforms such as a similarity join on misspelled country names.
+230,pagesOfTextToDisplay-1,7.250283670146018e-05,230,"However, suggested transforms (and their consequences) may be difficult to understand."
+173,pagesOfTextToDisplay-1,7.224155706353486e-05,173,"As a result, we adopted a mixed-initiative approach [12]; instead of mapping an interaction to a single transform, we surface likely transforms as an ordered list of suggestions."
+44,pagesOfTextToDisplay-1,7.214080687845126e-05,44,"As analysts transform data, their steps are recorded in a script to facilitate reuse and provide documentation of data provenance."
+70,pagesOfTextToDisplay-1,7.210062176454812e-05,70,Potter's Wheel [22] provides a transformation language for data formatting and outlier detection.
+204,pagesOfTextToDisplay-1,7.174385973485187e-05,204,The lag operator shifts the values of a column up or down by a specified number of rows.
+30,pagesOfTextToDisplay-1,6.945977656869218e-05,30,"This paper presents the design of Wrangler , a system for interactive data transformation."
+472,pagesOfTextToDisplay-1,6.934132397873327e-05,472,"Future work should help users form data cleaning strategies, perhaps through improved tutorials."
+315,pagesOfTextToDisplay-1,6.923938053660095e-05,315,"TYPES, ROLES, AND VERIFICATION It is often difficult to discover data quality issues and therefore difficult to address them by constructing the appropriate transform."
+28,pagesOfTextToDisplay-1,6.897411367390305e-05,28,Multiple analysts might use transformed data and wish to review or refine the transformations that were previously applied; the importance of capturing data provenance is magnified when data and scripts are shared.
+20,pagesOfTextToDisplay-1,6.852848309790716e-05,20,"Sadly, when it comes to the practice of data analysis, ""the tedium is the message."""
+6,pagesOfTextToDisplay-1,6.850912177469581e-05,6,"Interactive histories support review, refinement, and annotation of transformation scripts."
+208,pagesOfTextToDisplay-1,6.813497748225927e-05,208,"To aid data validation and transformation, Wrangler supports standard data types (e.g., integers, numbers, strings) and higher-level semantic roles (e.g., geographic location, classification codes, currencies)."
+270,pagesOfTextToDisplay-1,6.797450623707846e-05,270,Visual Transformation Previews Wrangler uses visual previews to enable users to quickly evaluate the effect of a transform.
+326,pagesOfTextToDisplay-1,6.789740291424096e-05,326,"For instance, clicking the missing values bar will suggest transforms to fill in missing values or delete those rows."
+86,pagesOfTextToDisplay-1,6.778151146136224e-05,86,"The analyst begins by pasting the text of the file into an input box; alternatively, she could upload the file."
+273,pagesOfTextToDisplay-1,6.638151535298675e-05,273,"First, displaying two versions of a table inherently forces both versions to be small, which is particularly frustrating when the differences are sparse."
+80,pagesOfTextToDisplay-1,6.607428076677024e-05,80,"Analysts can navigate the space of transforms by directly selecting data, indicating a desired transform via menus, or by modifying a related transform; each of these actions leads Wrangler to further refine the set of suggestions."
+62,pagesOfTextToDisplay-1,6.606271199416369e-05,62,"Vegemite [18] applies PBD to integrate web data, automates the use of web services, and generates shareable scripts."
+215,pagesOfTextToDisplay-1,6.596650200663134e-05,215,"The Wrangler semantic role system is extensible, but currently supports a limited set of common roles such as geographic locations, government codes, currencies, and dates."
+473,pagesOfTextToDisplay-1,6.580660556210205e-05,473,"Looking forward, Wrangler addresses only a subset of the hurdles faced by data analysts."
+168,pagesOfTextToDisplay-1,6.568218668689951e-05,168,DESIGN PROCESS We based Wrangler on a transformation language with a handful of operators.
+125,pagesOfTextToDisplay-1,6.558519089594483e-05,125,"The analyst executes this transform and renames the resulting column ""State""."
+22,pagesOfTextToDisplay-1,6.531437247758731e-05,22,"For instance, analysts often split data into meaningful records and attributes—or validate fields such as dates and addresses—using complex regular expressions that are error-prone and tedious to interpret [2, 24]."
+463,pagesOfTextToDisplay-1,6.530069367727265e-05,463,"When this happened, some users kept searching and refining only these filtered transforms."
+220,pagesOfTextToDisplay-1,6.434891110984609e-05,220,The result is a clear one-to-one mapping between transforms presented in the interface and statements in output scripts.
+387,pagesOfTextToDisplay-1,6.42594532109797e-05,387,"If a user selects three or fewer characters, split transforms are ranked above extract transforms; the opposite is true for longer selections."
+184,pagesOfTextToDisplay-1,6.42238519503735e-05,184,"These include features such as positional operators, aggregation, semantic roles, and complex reshaping operators (e.g., using multiple key rows for cross-tabs)."
+68,pagesOfTextToDisplay-1,6.350660260068253e-05,68,Prior tools (except for Vegemite [18]) also do not generate scripts to document provenance.
+309,pagesOfTextToDisplay-1,6.227848643902689e-05,309,Analysts can use annotations to document their rationale for a particular transform and may help future users better understand data provenance.
+328,pagesOfTextToDisplay-1,6.196894537424669e-05,328,"THE WRANGLER INFERENCE ENGINE We now present the design of the Wrangler inference engine, which is responsible for generating a ranked list of suggested transforms."
+229,pagesOfTextToDisplay-1,6.122735067037866e-05,229,These suggestions are intended to facilitate the discovery and application of more complicated transforms.
+349,pagesOfTextToDisplay-1,6.063593536964618e-05,349,"For example, we infer regular expressions for text selection based solely on the selected text, a process otherwise independent of which rows or columns are selected."
+365,pagesOfTextToDisplay-1,6.0262857005000114e-05,365,"During this process we do not infer complex criteria such as row predicates or regular expressions; we do infer enumerable parameters, index-based row selections, and column inputs."
+467,pagesOfTextToDisplay-1,6.013764505041763e-05,467,"CONCLUSION AND FUTURE WORK This paper introduced Wrangler, an interface and underlying language for data transformation."
+221,pagesOfTextToDisplay-1,6.0130048950668424e-05,221,"Prior work [17, 22] proves that our basic set of transforms is sufficient to handle all one-to-one and one-tomany transforms."
+182,pagesOfTextToDisplay-1,5.946213423158042e-05,182,As our starting point we used the Potter's Wheel transformation language [22] (which in turn draws from SchemaSQL [17]).
+15,pagesOfTextToDisplay-1,5.931472696829587e-05,15,"CHI 2011 , May 7–12, 2011, Vancouver, BC, Canada."
+316,pagesOfTextToDisplay-1,5.918621536693536e-05,316,Wrangler aids discovery of data quality issues through the use of data types and semantic roles.
+247,pagesOfTextToDisplay-1,5.8901339798467234e-05,247,"The user can edit this transform directly; as a user edits parameters, the suggestion space updates to reflect these edits."
+287,pagesOfTextToDisplay-1,5.864263584953733e-05,287,We show a sideby-side display of versions when previewing fold and unfold transforms.
+360,pagesOfTextToDisplay-1,5.8329715102445334e-05,360,"Generating Suggested Transforms After inferring parameter sets, Wrangler generates a list of transform suggestions."
+149,pagesOfTextToDisplay-1,5.795427568955347e-05,149,"The unfold operation creates new columns for each unique value found in the ""Year"" column, and reorganizes the ""Property_crime_rate"" values by placing each in the appropriate cell in the resulting matrix."
+78,pagesOfTextToDisplay-1,5.761622014688328e-05,78,Wrangler builds on this prior work to contribute novel techniques for specifying data transforms.
+424,pagesOfTextToDisplay-1,5.62543973501306e-05,424,"but not ""how do I get the number of bedrooms out?"" )."
+213,pagesOfTextToDisplay-1,5.581341974902898e-05,213,"The zip code role can also register mapping functions, e.g., to return the containing state or a central lat-lon coordinate."
+9,pagesOfTextToDisplay-1,5.558676639338955e-05,9,"ACM Classification Keywords H.5.2 Information Interfaces and Presentation: UI INTRODUCTION Despite significant advances in technologies for data management and analysis, it remains time-consuming to inspect a data set and mold it to a form that allows meaningful analysis to begin."
+171,pagesOfTextToDisplay-1,5.432638863567263e-05,171,A given interaction could imply multiple transforms and multiple interactions might imply the same transform.
+218,pagesOfTextToDisplay-1,5.254293864709325e-05,218,"Disconnects between the two might cause confusion [20], particularly when analysts try to interpret code-generated scripts."
+74,pagesOfTextToDisplay-1,5.188042632653378e-05,74,Google Refine [13] (formerly Freebase GridWorks) leverages Freebase to enable entity resolution and discrepancy detection.
+236,pagesOfTextToDisplay-1,5.10929457959719e-05,236,"Users can select rows, select columns, click bars in the data quality meter, select text within a cell, edit data values within the table (for mass editing [14, 19]), and assign column names, data types or semantic roles."
+225,pagesOfTextToDisplay-1,5.0546383135952055e-05,225,This synthesis of techniques enables analysts to navigate the space of transforms using the means they find most convenient.
+242,pagesOfTextToDisplay-1,4.9771300837164745e-05,242,"Providing examples is especially effective for text selections needed for splitting, extraction, and reformatting; two or three wellchosen examples typically suffice."
+323,pagesOfTextToDisplay-1,4.975434057996608e-05,323,Above each column is a data quality meter : a divided bar chart that indicates the proportion of values in the column that verify completely.
+43,pagesOfTextToDisplay-1,4.97177716169972e-05,43,These techniques enable analysts to rapidly navigate and assess the space of viable transforms.
+385,pagesOfTextToDisplay-1,4.9544774810783565e-05,385,"Third, we rank transform types based on their corpus frequency, conditioned on their initiating user interaction (e.g., text or column selection)."
+260,pagesOfTextToDisplay-1,4.915889439871535e-05,260,"For instance, we translate regular expressions into natural language via pattern substitution (e.g., (\d+) to 'number')."
+346,pagesOfTextToDisplay-1,4.871152123087086e-05,346,"Inferring Parameter Sets from User Interaction In response to user interaction, Wrangler attempts to infer three types of transform parameters: row, column, or text selections."
+227,pagesOfTextToDisplay-1,4.8026180593296885e-05,227,"While direct manipulation selections can help, inference is required to suggest transforms without programming."
+275,pagesOfTextToDisplay-1,4.793557309312746e-05,275,"As we discuss next, in-place previews better afford direct manipulation for users to revise the current transform."
+321,pagesOfTextToDisplay-1,4.702800288214348e-05,321,"An icon in the column header indicates the semantic role of the column, or the underlying data type if no role has been assigned."
+274,pagesOfTextToDisplay-1,4.6889912482583895e-05,274,"Second, presenting in-place modifications draws user attention to the effect of the transformation in its original context, without requiring a shift in focus across multiple tables."
+48,pagesOfTextToDisplay-1,4.6838111302349716e-05,48,We find that Wrangler significantly reduces specification time and promotes the use of robust transforms rather than manual editing.
+239,pagesOfTextToDisplay-1,4.5494034566218033e-05,239,"In some cases the set of possible suggestions is large (in the hundreds), but we wish to show only a relevant handful to avoid overload."
+212,pagesOfTextToDisplay-1,4.528052522800863e-05,212,"The zip code role can check that a zip code parses correctly (i.e., is a 5 digit number) and that it is a valid zip code (checking against an external dictionary of known zipcodes)."
+189,pagesOfTextToDisplay-1,4.5190037781139836e-05,189,"Map transforms map one input data row to zero, one, or multiple output rows."
+140,pagesOfTextToDisplay-1,4.512146188062616e-05,140,"Wrangler suggests split , extract , and cut transforms, but no delete operations."
+7,pagesOfTextToDisplay-1,4.4456959585659206e-05,7,"User study results show that Wrangler significantly reduces specification time and promotes the use of robust, auditable transforms instead of manual editing."
+292,pagesOfTextToDisplay-1,4.420195546117611e-05,292,"When possible, previews also indicate where the user can modify the transform through either direct manipulation or description refinement."
+456,pagesOfTextToDisplay-1,4.32211636507418e-05,456,Users' preference for suggestions and previews over direct editing provides evidence that these novel user interface features have merit.
+142,pagesOfTextToDisplay-1,4.317344428272918e-05,142,This action reorders the suggestions so that delete commands have higher ranking.
+85,pagesOfTextToDisplay-1,4.28861822001636e-05,85,We describe how an analyst can use Wrangler to transform the data into more usable formats (Figures 1–7).
+57,pagesOfTextToDisplay-1,4.277889456716366e-05,57,"Bellman [5] helps users understand the structure and quality of a database, but does not enable transformations."
+83,pagesOfTextToDisplay-1,4.2455169023014605e-05,83,"USAGE SCENARIO Consider an example wrangling task, using housing crime data from the U.S. Bureau of Justice Statistics."
+434,pagesOfTextToDisplay-1,4.1702278394950554e-05,434,"Wrangler Accelerates Transform Specification We performed a repeated-measures ANOVA of completion times with task, tool, and Excel novice/expert 2 as independent factors; we log-transformed responses to better approximate a normal distribution."
+56,pagesOfTextToDisplay-1,4.118483775528148e-05,56,"Topes support transformations such as text formatting and lookups, but provide little support for filtering, reshaping, or aggregation."
+219,pagesOfTextToDisplay-1,3.947835648432374e-05,219,"As a result, we chose to introduce redundancy in the language by adding operators for high-level actions that are commonly needed but have unintuitive lower-level realizations (e.g., positional operators can be realized using key transforms, self-joins, and scalar functions)."
+255,pagesOfTextToDisplay-1,3.859693606500514e-05,255,We designed these descriptions to be concise; default parameters that are not critical to understanding may be omitted.
+442,pagesOfTextToDisplay-1,3.841706711682491e-05,442,"As data set size grows, we expect the benefits of Wrangler to come into even sharper relief."
+319,pagesOfTextToDisplay-1,3.8107438740553334e-05,319,"When multiple types satisfy this criteria, Wrangler assigns the more specific one (e.g., integer is more specific than double )."
+18,pagesOfTextToDisplay-1,3.7494020943995565e-05,18,"Such ""data wrangling"" often requires writing idiosyncratic scripts in programming languages such as Python and Perl, or extensive manual editing using interactive tools such as Microsoft Excel."
+261,pagesOfTextToDisplay-1,3.7136338505661115e-05,261,This translation can make some descriptions less concise but increases readability.
+155,pagesOfTextToDisplay-1,3.671185550047085e-05,155,"split( 'data' ).on(NEWLINE).max_splits(NO_MAX) split( 'split' ).on(COMMA).max_splits(NO_MAX) columnName().row(0) delete(isEmpty()) extract( 'Year' ).on( /.*/ ).after( /in / ) columnName( 'extract' ).to( 'State' ) fill( 'State' ).method(COPY).direction(DOWN) delete( 'Year starts with ""Reported""' ) unfold( 'Year' ).above( 'Property_crime_rate' ) dw.wrangle() .push(dwsplit('data').on(dw."
+172,pagesOfTextToDisplay-1,3.587449464248493e-05,172,"Although this many-to-many relationship between the language and interaction might complicate our interface, we found the relationship to be relatively sparse in practice: the number of likely transforms for a given gesture is small."
+228,pagesOfTextToDisplay-1,3.5843921068590134e-05,228,"To reduce this gulf of execution [20], Wrangler uses an inference engine that suggests data transformations based on user input, data type or semantic role, and a number of empirically-derived heuristics."
+200,pagesOfTextToDisplay-1,3.429033677093685e-05,200,Reshaping enables higher-order data restructuring and is common in tools such as R and Excel Pivot Tables.
+166,pagesOfTextToDisplay-1,2.9763201382593252e-05,166,"The result of a data wrangling session is a declarative data cleaning script, shown here as generated JavaScript code."
+435,pagesOfTextToDisplay-1,2.816127016558312e-05,435,"We found a significant main effect of tool ( F 1 , 54 = 23.65, p< 0.001), but no main effect of task ( F 1 , 54 = 0.01, p = 0.943) or expertise ( F 1 , 54 = 0.30, p = 0.596)."
+210,pagesOfTextToDisplay-1,2.774575841613114e-05,210,"Semantic roles consist of additional functions for parsing and formatting values, plus zero or more transformation functions that map between related roles."

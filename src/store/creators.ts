@@ -227,8 +227,7 @@ const UserDocDefaults = {
     type: "userDoc" as NodeDataTypes,
     base64: convertBase64.serialize(initKeySafeSlate()),
     text: "",
-    useTextForAutocomplete: true,
-    html: ""
+    useTextForAutocomplete: true
   },
   meta: makeNodeMeta(),
   style: {

@@ -91,7 +91,8 @@ const PdfViewerDefaults = {
     height: "100%" as number | string | undefined,
     scale: 1,
     showLineBoxes: false,
-    isMainReader: false
+    isMainReader: false,
+    scrollAfterClick: false
   },
   state: {
     scale: 2, // todo scale
@@ -105,7 +106,8 @@ const PdfViewerDefaults = {
     },
     outline: [] as PDFTreeNode[],
     viewboxes: [] as PdfSegmentViewbox[],
-    patches: []
+    patches: [],
+    activateScroll: false
   }
 };
 
@@ -130,7 +132,7 @@ const mapState = (state: iRootState, props: typeof PdfViewerDefaults) => {
 
 const mapDispatch = ({
   graph: { addBatch, removeBatch, toggleSelections, updateBatch },
-  app: {setPortals}
+  app: { setPortals }
 }: iDispatch) => ({
   addBatch,
   removeBatch,
@@ -154,7 +156,6 @@ class PdfViewer extends React.Component<
   scrollRef = React.createRef<HTMLDivElement>();
   onScroll = e => {
     e.stopPropagation();
-    
   };
   static getDerivedStateFromProps(
     props: typeof PdfViewerDefaults.props & connectedProps,
@@ -183,7 +184,6 @@ class PdfViewer extends React.Component<
             (patch.value.data.type === "pdf.segment.viewbox",
             patch.value.data.pdfDir === props.pdfDir)
           ) {
-
             if (patch.op === "add") draft.push(patch.value);
             if (patch.op === "remove") {
               draft.splice(draft.findIndex(v => v.id === id), 1);
@@ -306,7 +306,8 @@ class PdfViewer extends React.Component<
       !equal(nextProps, this.props) ||
       this.state.pages.length !== nextState.pages.length ||
       this.state.scale !== nextState.scale ||
-      !equal(this.state.viewboxes, nextState.viewboxes)
+      !equal(this.state.viewboxes, nextState.viewboxes) ||
+      nextState.activateScroll !== this.state.activateScroll
     );
   }
 
@@ -322,7 +323,8 @@ class PdfViewer extends React.Component<
     ) {
       const pageOffset = this.getPageOffset();
       const { left, top } = this.props;
-      this.scrollRef.current.scrollTo(left, top + pageOffset);
+      if (this.scrollRef.current)
+        this.scrollRef.current.scrollTo(left, top + pageOffset);
     }
   };
 
@@ -411,11 +413,18 @@ class PdfViewer extends React.Component<
       const { width, height } = page.viewport;
       return (
         <div
+          id="pdf-viewer"
           key={page.pageNumber}
           onWheel={this.zoom}
-          style={{ width, minWidth: width, height, position: "relative" }}
+          style={{
+            width,
+            minWidth: width,
+            height,
+            position: "relative"
+          }}
         >
           <PageCanvas
+            id={"canvas-" + page.pageNumber}
             key={"canvas-" + page.pageNumber}
             page={page.page}
             viewport={page.viewport}
@@ -428,6 +437,7 @@ class PdfViewer extends React.Component<
                 /> */}
 
           <PageSvg
+            id={"svg-" + page.pageNumber}
             // scale={this.state.scale}
             isMainReader={this.props.isMainReader}
             key={"svg-" + page.pageNumber}
@@ -453,21 +463,57 @@ class PdfViewer extends React.Component<
   render() {
     console.log("pdf render");
     const { width, height } = this.props;
+    let overflow;
+    if (this.props.scrollAfterClick) {
+      overflow =
+      this.props.scrollAfterClick && this.state.activateScroll
+        ? "scroll"
+        : "hidden";
+    } else {
+      overflow= 'scroll'
+    }
+      
+    console.log(this.props.scrollAfterClick, this.state.activateScroll);
+
     // todo: set height and width and then scrollto
     return (
       <>
         <div
-        id="MainPdfReader"
+          id="MainPdfReader"
           ref={this.scrollRef}
           style={{
             maxWidth: width,
             maxHeight: height,
             boxSizing: "border-box",
-            overflow: "scroll"
+            overflow
           }}
           onScroll={this.onScroll}
+          onClick={e => {
+            if (this.props.scrollAfterClick && !this.state.activateScroll) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+
+            this.setState({ activateScroll: true });
+          }}
+          onMouseLeave={e => this.setState({ activateScroll: false })}
           // onClick={e => {e.stopPropagation(); this.props.setPortals([])}}
         >
+          {this.props.scrollAfterClick && !this.state.activateScroll && (
+            <div
+              style={{
+                background: "blue",
+                position: "absolute",
+                zIndex: 2,
+                width,
+                height,
+                opacity: 0,
+                cursor: "pointer"
+              }}
+            >
+              {" "}
+            </div>
+          )}
           {this.renderPages()}
         </div>
       </>

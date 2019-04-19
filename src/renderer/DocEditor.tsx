@@ -21,12 +21,46 @@ import {
   MdSave,
   MdNoteAdd,
   MdDeleteForever,
-  MdSettings
+  MdSettings,
+  MdArrowUpward
 } from "react-icons/md";
-import Slate from "slate";
+import Downshift from "downshift";
+import { connect } from "react-redux";
+import convertBase64 from "slate-base64-serializer";
 
 // custom
-import { getWordAtCursor } from "./EditorUtils";
+import { getWordAtCursor, initKeySafeSlate } from "./EditorUtils";
+import { getSelectionRange, inFirstNotSecondArray } from "./utils";
+import { iDispatch, iRootState } from "../store/createStore";
+import { UserDoc } from "../store/creators";
+import { htmlSerializer } from "./htmlSerializer";
+import { NodeDataTypes, makeLink, UserDoc } from "../store/creators";
+
+
+
+// todo
+/**
+ * ?scenarios
+ * --------
+ *  
+ * * autocomplete + link
+ * 
+ * 
+ * * links from heirarchy changes
+ *  - capture list operations
+ *  
+ * 
+ *  *make a new node from within the editor
+ *  - select text, hit button or key cmd
+ *  - create node and link to current editor node
+ *  - each listen becomes a node if not already
+ * 
+ * ?code quality
+ * ------------
+ * *one place for all this related slate stuff
+ * wrap node functions + rendernodes + serialize + deserialize should go together
+ *
+ */
 
 type SlateTypes =
   | "bold"
@@ -89,15 +123,13 @@ const toggleBlock = (editor, type: SlateTypes): void => {
   });
   const outerType = editor.value.blocks.map(block => {
     const closest = editor.value.document.getClosest(block.key, parent => true);
-    return  !!closest ? closest.toJS().type: ""
+    return !!closest ? closest.toJS().type : "";
   });
 
   const isList = editor.value.blocks.some(
     node => node.type === ("list-item-child" as SlateTypes)
   );
 
-  
-  
   if (isList) return null;
   if (isType) {
     editor.unwrapBlock(type);
@@ -143,18 +175,47 @@ const plugins = [
 /**
  * @class **DocEditor**
  */
+
+const mapState = (state: iRootState) => ({
+  pdfDir: state.app.panels.mainPdfReader.pdfDir,
+  pdfRootDir: state.app.current.pdfRootDir,
+  nodes: state.graph.nodes,
+  links: state.graph.links,
+  patches: state.graph.patches
+});
+
+const mapDispatch = ({
+  graph: { addBatch, toggleSelections, updateBatch, removeBatch },
+  app: { setCurrent }
+}: iDispatch) => ({
+  addBatch,
+  setCurrent,
+  toggleSelections,
+  updateBatch,
+  removeBatch
+});
+
+type connectedProps = ReturnType<typeof mapState> &
+  ReturnType<typeof mapDispatch>;
+
 const DocEditorDefaults = {
   props: {
-    readOnly: false
+    readOnly: false,
+    id: "",
+    nodesOrLinks: "nodes",
+    autoCompThresh: 140 // n chars
   },
   state: {
-    editorValue: Plain.deserialize("some text") as Editor["value"],
+    editorValue: initKeySafeSlate(),
     wordAtCursor: "",
-    fontSize: 16
+    fontSize: 16,
+    useTextForAutocomplete: true,
+    docFeatures: { hasList: false, nChars: 0 },
+    autoCompDoc: [] as UserDoc[]
   }
 };
-export default class DocEditor extends React.Component<
-  typeof DocEditorDefaults.props,
+export class DocEditor extends React.Component<
+  typeof DocEditorDefaults.props & connectedProps,
   typeof DocEditorDefaults.state
 > {
   static defaultProps = DocEditorDefaults.props;
@@ -164,10 +225,97 @@ export default class DocEditor extends React.Component<
     this.editor = editor;
   };
 
-  componentDidMount() {}
+  static getDerivedStateFromProps(props, state) {
+    // todo perf patch
+    let autoCompDocs: UserDoc[];
+    if (props.nodes) {
+      //@ts-ignore
+      autoCompDocs = (Object.values(props.nodes) as aNode).filter(
+        node =>
+          node.data.type === ("userDoc" as NodeDataTypes) &&
+          node.id !== props.id &&
+          node.data.useTextForAutocomplete
+      );
+      if (state.wordAtCursor !== "") {
+        // todo could do fuzzy matching here
+        autoCompDocs = autoCompDocs.filter(t => {
+          return (
+            t.data.text.includes(state.wordAtCursor) &&
+            t.data.text.trim() !== state.wordAtCursor.trim()
+          );
+        });
+      } else {
+        autoCompDocs = [];
+      }
+    }
+
+    const showAutoComplete =
+      state.wordAtCursor.length > 1 &&
+      !props.readOnly &&
+      autoCompDocs.length > 0;
+    if (
+      autoCompDocs.length !== state.autoCompDoc.length ||
+      showAutoComplete !== state.showAutoComplete
+    ) {
+      return { autoCompDocs, showAutoComplete };
+    } else {
+      return null;
+    }
+  }
+
+  getCurrentBase64 = () => {
+    const { id, nodesOrLinks } = this.props;
+    return oc(this.props)[nodesOrLinks][id].data.base64();
+  };
+
+  initBase64 = () => {
+    if (this.props.id.length > 0) {
+      //@ts-ignore
+      const base64 = this.getCurrentBase64();
+      if (!!base64) {
+        const editorValue = convertBase64.deserialize(base64);        
+        editorValue.document
+        this.setState({ editorValue });
+      }
+    }
+  };
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.editor.focus();
+    }, 100); // thanks random github user
+    this.initBase64();
+  }
+
+  serialize = editorValue => {
+    const base64 = convertBase64.serialize(editorValue);
+    const text = Plain.serialize(editorValue);
+    return { base64, text };
+  };
+
+  getDocFeatures = (editor): { nChars; hasList } => {
+    return editor.value.document.getBlocks().reduce(
+      (all, b) => {
+        all.nChars += b.text.trim().length;
+        if (!all.hasList) all.hasList = b.type === "list-item-child";
+        return all;
+      },
+      { nChars: 0, hasList: false }
+    );
+  };
 
   onChange = change => {
-    this.setState({ editorValue: change.value });
+    const docFeatures = this.getDocFeatures(change);
+    const useTextForAutocomplete =
+      docFeatures.nChars > 0 &&
+      docFeatures.nChars <= this.props.autoCompThresh &&
+      !docFeatures.hasList;
+
+    this.setState({
+      editorValue: change.value,
+      useTextForAutocomplete,
+      docFeatures
+    });
     this.getCurrentWord(change);
   };
 
@@ -179,11 +327,31 @@ export default class DocEditor extends React.Component<
       anchorText,
       anchorOffset
     );
+
     if (!isEndOfWord) {
       this.setState({ wordAtCursor: "" });
     } else {
       this.setState({ wordAtCursor: text });
     }
+  };
+
+  wrapWithGraphNode = (node: UserDoc) => {
+    const text = oc(node).data.text();
+    const { id } = node;
+
+    this.editor
+      .moveAnchorBackward(this.state.wordAtCursor.length)
+      .insertText(text)
+      .moveAnchorBackward(text.length)
+      .wrapInline({
+        type: "graph",
+        data: {
+          id,
+          isNode: true
+        }
+      })
+      .moveAnchorForward(text.length)
+      .focus();
   };
 
   hasMark = type => {
@@ -216,8 +384,9 @@ export default class DocEditor extends React.Component<
     }
   };
 
-  renderNode = (props, editor, next) => {
-    const { attributes, children, node } = props;
+  renderSlateNodes = (props, editor, next) => {
+    const { attributes, children, node, isFocused } = props;
+    let data = node.data.toJS();
 
     switch (node.type) {
       case "block-quote":
@@ -238,6 +407,22 @@ export default class DocEditor extends React.Component<
         return <ul {...attributes}>{children}</ul>;
       case "paragraph":
         return <div {...attributes}>{children}</div>;
+      case "graph":
+        return (
+          <span
+            {...attributes}
+            // todo better names
+            data-graph-path={node.data.get("type")}
+            data-graph-id={node.data.get("id")}
+            style={{
+              border: isFocused ? "1px solid blue" : "none",
+              fontStyle: "italic"
+            }}
+            contentEditable={false}
+          >
+            {node.text}
+          </span>
+        );
       default:
         return next();
     }
@@ -282,35 +467,58 @@ export default class DocEditor extends React.Component<
       </Button>
     );
   };
+  iconProps = { size: "25px", style: { verticalAlign: "middle" } };
+
+  AutocompleteButton = () => {
+    const { useTextForAutocomplete, docFeatures } = this.state;
+    const thresh = this.props.autoCompThresh;
+    const chars = docFeatures.nChars > thresh ? `> ${thresh} characters.` : "";
+    const list = docFeatures.hasList ? "Has list." : "";
+
+    const title = `${
+      useTextForAutocomplete
+        ? `Under ${thresh} chars. No lists. Will`
+        : "Will not"
+    } be used for autocomplete. ${chars} ${list}`;
+
+    return (
+      <Button key={"Will Auto"} title={title} isActive={useTextForAutocomplete}>
+        <MdArrowUpward
+          size={"25px"}
+          style={{ verticalAlign: "middle", cursor: "help" }}
+        />
+      </Button>
+    );
+  };
 
   MakeButtons = () => {
-    const iconProps = { size: "25px", style: { verticalAlign: "middle" } };
     return [
       this.renderMarkButton(
         "bold",
-        <MdFormatBold {...iconProps} />,
+        <MdFormatBold {...this.iconProps} />,
         marks.bold.cmd
       ),
       this.renderMarkButton(
         "italics",
-        <MdFormatItalic {...iconProps} />,
+        <MdFormatItalic {...this.iconProps} />,
         marks.italic.cmd
       ),
       this.renderMarkButton(
         "underline",
-        <MdFormatUnderlined {...iconProps} />,
+        <MdFormatUnderlined {...this.iconProps} />,
         marks.underline.cmd
       ),
       this.renderListButton(
         "ordered-list",
-        <MdFormatListNumbered {...iconProps} />,
+        <MdFormatListNumbered {...this.iconProps} />,
         "ctrl-o"
       ),
       this.renderListButton(
         "unordered-list",
-        <MdFormatListBulleted {...iconProps} />,
+        <MdFormatListBulleted {...this.iconProps} />,
         "ctrl-l"
-      )
+      ),
+      this.AutocompleteButton()
     ];
   };
 
@@ -326,11 +534,33 @@ export default class DocEditor extends React.Component<
     return next();
   };
 
+  save = e => {
+    if (e.target.id !== "EditorContainer") return null;
+
+    const serialized = this.serialize(this.state.editorValue);
+    if (serialized.base64 === this.getCurrentBase64()) return null;
+
+    this.props.updateBatch({
+      nodes: [
+        {
+          id: this.props.id,
+          data: {
+            ...serialized,
+            useTextForAutocomplete: this.state.useTextForAutocomplete
+          }
+        }
+      ]
+    });
+  };
+  onFocus = () => {
+  };
+  onBlur = () => {
+      const {text, base64} = this.serialize(this.editor.value)
+  };
+
   render() {
-    // console.log(
-    //   this.state.editorValue.blocks.toJS().map(x => x.type),
-    //   this.state.editorValue.inlines.toJS().map(x => x.type)
-    // );
+    const { wordAtCursor } = this.state;
+
     return (
       <OuterContainer>
         <Toolbar>
@@ -345,10 +575,12 @@ export default class DocEditor extends React.Component<
             title="Base Font Size"
           />
         </Toolbar>
-
-        <EditorContainer fontSize={this.state.fontSize}>
+        <EditorContainer
+          id="EditorContainer"
+          fontSize={this.state.fontSize} //todo save
+          onMouseOut={this.save}
+        >
           <Editor
-            autoFocus
             readOnly={this.props.readOnly}
             ref={this.ref as any}
             spellCheck={false}
@@ -357,16 +589,51 @@ export default class DocEditor extends React.Component<
             plugins={plugins}
             style={{ padding: 0, margin: 0, width: "100%", height: "100%" }}
             renderMark={this.renderMark}
-            renderNode={this.renderNode}
+            renderNode={this.renderSlateNodes}
             onKeyDown={this.onKeyDown}
+            onFocus={this.onFocus}
+            onBlur={this.onBlur}
           />
         </EditorContainer>
+        {this.state.wordAtCursor}
+        {this.state.autoCompDocs.map(doc => {
+          return (
+            <span key={doc.id} style={{ fontSize: 16 }}>
+              {doc.data.text}
+            </span>
+          );
+        })}
       </OuterContainer>
     );
   }
 }
+import * as fuzzy from "fuzzy";
 
-const _Button = styled.span<{ isActive: boolean; onMouseDown }>``;
+function fuzzyMatch(textToMatch, nodesWithText) {
+  var results = fuzzy.filter(
+    textToMatch.toLowerCase(),
+    nodesWithText as any[],
+    {
+      pre: "<b>",
+      post: "</b>",
+      extract: function(el) {
+        return el.data.text;
+      }
+    }
+  );
+  const toShow = results.map(el => ({
+    html: el.string,
+    ...el.original
+  }));
+  return toShow;
+}
+
+export default connect(
+  mapState,
+  mapDispatch
+)(DocEditor);
+
+const _Button = styled.span<{ isActive: boolean; onMouseDown? }>``;
 export const Button = styled(_Button)`
   cursor: pointer;
   margin: 0px 5px;
