@@ -10,6 +10,7 @@ import path = require("path");
 import { hot } from "react-hot-loader/root";
 import Select from "react-select";
 
+
 // custom
 import store, { iRootState, iDispatch, defaultApp } from "../store/createStore";
 import PdfViewer from "./PdfViewer";
@@ -17,7 +18,7 @@ import { setupDirFromPdfs } from "./io";
 import ListView from "./ListView";
 import {
   makePdfPublication,
-  makeAutograbNode,
+  makeAutograbNode, 
   aNode,
   PdfPublication,
   makeLink
@@ -28,6 +29,8 @@ import PortalContainer from "./PortalContainer";
 import { mData } from "./rx";
 import DocEditor from "./DocEditor";
 import console = require("console");
+import DocList from "./DocList";
+const { featureToggles } = require("../../featureToggle.json");
 
 const NavBar = styled.div`
   font-size: 30px;
@@ -98,36 +101,45 @@ const processNewPdfs = async (pdfRootDir, nodes) => {
     );
   });
 
-  const autograbNodes = pdfDirs.map((dir, ix) => {
-    return makeAutograbNode(
-      dir,
-      { dir },
-      { x: 50 + ix + Math.random() * 100, y: 50 + ix * Math.random() * 100 }
-    );
-  });
-
   const allNodeIds = Object.keys(nodes);
-  
+
   const newPubs = pdfNodes.filter(pdfNode => !allNodeIds.includes(pdfNode.id)); //filter out nodes that exists
-  const newAutograbs = autograbNodes.filter(autograbNode => !allNodeIds.includes(autograbNode.id)); //filter out nodes that exists
 
-  // add links btw nodes of type auto-grab and nodes of pdf.publication
-  let newLinks=[]
-  for (let i=0;i<newPubs.length;i++){
-    const linkToPdf = makeLink(newPubs[i].id, newAutograbs[i].id, { type: "more" });
-    newLinks.push(linkToPdf)
-    // assert each paper corresponds to one autograb node and idx are the same(for now)
+  if (!featureToggles.showAutoGrab) {  // do not show auto-grab, return directly
+    return newPubs;
+  } else {
+    const autograbNodes = pdfDirs.map((dir, ix) => {
+      return makeAutograbNode(
+        dir,
+        { dir },
+        { x: 50 + ix + Math.random() * 100, y: 50 + ix * Math.random() * 100 }
+      );
+    });
+
+    const newAutograbs = autograbNodes.filter(
+      autograbNode => !allNodeIds.includes(autograbNode.id)
+    ); //filter out nodes that exists
+
+    // add links from nodes of type auto-grab to nodes of pdf.publication
+    let newLinks = [];
+    for (let i = 0; i < newPubs.length; i++) {
+      const linkToPdf = makeLink(newPubs[i].id, newAutograbs[i].id, {
+        type: "more"
+      });
+      newLinks.push(linkToPdf);
+      // assert each paper corresponds to one autograb node and idx are the same(for now)
+    }
+
+    // concatenate nodes of type auto-grab and nodes of pdf.publication
+    let newNodes = [] as aNode[];
+    const nodesArray = newPubs.concat(autograbNodes);
+    for (let i = 0; i < nodesArray.length; i++) {
+      newNodes.push(nodesArray[i]);
+    }
+    // return new nodes and links batch to be added in Redux
+    return { newNodes: newNodes, newLinks: newLinks };
   }
 
-  // concatenate nodes of type auto-grab and nodes of pdf.publication
-  let newNodes=[] as aNode[];
-  const nodesArray=newPubs.concat(autograbNodes)
-  for (let i=0;i<nodesArray.length;i++){
-    newNodes.push(nodesArray[i])
-  }
-
-  // return new nodes and links batch to be added in Redux
-  return {newNodes: newNodes, newLinks: newLinks};
 };
 
 type rightPanelName = typeof defaultApp.panels.rightPanel;
@@ -146,13 +158,14 @@ class _App extends React.Component<connectedProps, typeof AppDefaults.state> {
     }
   };
   async componentDidMount() {
-    const {newNodes, newLinks} = await processNewPdfs( // Destructuring assignment
+    const newNodes = await processNewPdfs(
+      // Destructuring assignment
       this.props.pdfRootDir,
       this.props.nodes
     );
 
     if (newNodes.length > 0) {
-      this.props.addBatch({ nodes: newNodes,links:newLinks });
+      this.props.addBatch({ nodes: newNodes });
       if (this.props.pdfDir === "")
         this.props.setMainPdfReader({ pdfDir: newNodes[0].id });
     }
@@ -207,9 +220,9 @@ class _App extends React.Component<connectedProps, typeof AppDefaults.state> {
         return <GraphContainer />;
       case "listview":
         return <ListView />;
-      case "synthesisOutlineEditor":
+      case "synthesisOutlineEditor" && featureToggles.showDocList:
         //         case "docEditor":
-        return <DocEditor />;
+        return <DocList />;
       default:
         return <div>alt-1 | alt-2 | alt-3</div>;
     }
@@ -252,7 +265,8 @@ class _App extends React.Component<connectedProps, typeof AppDefaults.state> {
                 tabIndex={0}
                 isMainReader={true}
                 key={pdfDir}
-                pageNumbersToLoad={[]}
+                pageNumbersToLoad={[1]}
+                scrollAfterClick={false}
                 {...{
                   pdfRootDir,
                   ...this.props.mainPdfReader,
